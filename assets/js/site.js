@@ -148,6 +148,26 @@
     });
   };
 
+  const initImageLoaders = () => {
+    document.querySelectorAll('.hero-image-loader').forEach((wrapper) => {
+      const image = wrapper.querySelector('.hero-image-loader__img');
+      if (!image) return;
+
+      const markLoaded = () => {
+        wrapper.classList.remove('is-loading');
+        wrapper.classList.add('is-loaded');
+      };
+
+      if (image.complete) {
+        markLoaded();
+        return;
+      }
+
+      image.addEventListener('load', markLoaded, { once: true });
+      image.addEventListener('error', markLoaded, { once: true });
+    });
+  };
+
   const initForms = () => {
     document.querySelectorAll('.wpr-form').forEach((form) => {
       const status = document.createElement('div');
@@ -205,6 +225,7 @@
     initPhoneButton();
     initBackgroundVideos();
     initAnimatedText();
+    initImageLoaders();
     initForms();
   });
 })();
