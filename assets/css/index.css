@@ -183,6 +183,13 @@ img.wp-smiley, img.emoji {
 	transition: opacity 520ms ease, transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
+.hero-image-loader__img.ui-image-loader,
+.hero-image-loader__img.ui-image-loader.is-loading,
+.hero-image-loader__img.ui-image-loader.is-loaded {
+	background: none;
+	box-shadow: none;
+}
+
 .hero-image-loader.is-loaded::before {
 	opacity: 0;
 	animation: none;
