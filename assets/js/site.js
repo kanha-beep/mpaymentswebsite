@@ -149,6 +149,25 @@
   };
 
   const initImageLoaders = () => {
+    document.querySelectorAll('main img').forEach((image) => {
+      if (image.classList.contains('wp-smiley') || image.classList.contains('emoji')) return;
+
+      image.classList.add('ui-image-loader', 'is-loading');
+
+      const markLoaded = () => {
+        image.classList.remove('is-loading');
+        image.classList.add('is-loaded');
+      };
+
+      if (image.complete) {
+        markLoaded();
+        return;
+      }
+
+      image.addEventListener('load', markLoaded, { once: true });
+      image.addEventListener('error', markLoaded, { once: true });
+    });
+
     document.querySelectorAll('.hero-image-loader').forEach((wrapper) => {
       const image = wrapper.querySelector('.hero-image-loader__img');
       if (!image) return;
