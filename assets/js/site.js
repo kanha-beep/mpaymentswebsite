@@ -188,6 +188,21 @@
   };
 
   const initForms = () => {
+    const emailJsConfig = window.EMAILJS_CONFIG;
+    const emailJsReady =
+      !!window.emailjs &&
+      !!emailJsConfig &&
+      emailJsConfig.publicKey &&
+      emailJsConfig.serviceId &&
+      emailJsConfig.templateId &&
+      !String(emailJsConfig.publicKey).startsWith('YOUR_');
+
+    if (emailJsReady) {
+      window.emailjs.init({
+        publicKey: emailJsConfig.publicKey,
+      });
+    }
+
     document.querySelectorAll('.wpr-form').forEach((form) => {
       const status = document.createElement('div');
       status.className = 'wpr-form-status';
@@ -200,7 +215,7 @@
         status.textContent = message;
       };
 
-      form.addEventListener('submit', (event) => {
+      form.addEventListener('submit', async (event) => {
         event.preventDefault();
         let valid = true;
 
@@ -224,6 +239,28 @@
         const name = form.querySelector('input[type="text"]')?.value.trim() || '';
         const email = form.querySelector('input[type="email"]')?.value.trim() || '';
         const message = form.querySelector('textarea')?.value.trim() || '';
+
+        if (emailJsReady) {
+          const pageName = form.getAttribute('page') || document.title || 'Website';
+
+          window.emailjs.send(emailJsConfig.serviceId, emailJsConfig.templateId, {
+            from_name: name,
+            from_email: email,
+            message,
+            page_name: pageName,
+            website_name: 'M Payments Processing',
+            reply_to: email,
+          }).then(() => {
+            form.classList.remove('is-submitting');
+            form.reset();
+            setStatus('is-success', 'Thanks. Your message has been sent successfully.');
+          }).catch(() => {
+            form.classList.remove('is-submitting');
+            setStatus('is-error', 'We could not send your message right now. Please try again.');
+          });
+          return;
+        }
+
         const subject = encodeURIComponent('Website enquiry from M Payments clone');
         const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
 
