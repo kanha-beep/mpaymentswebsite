@@ -248,7 +248,7 @@
             from_email: email,
             message,
             page_name: pageName,
-            website_name: 'M Payments Processing',
+            website_name: 'We Match Flow',
             reply_to: email,
           }).then(() => {
             form.classList.remove('is-submitting');
