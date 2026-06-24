@@ -267,7 +267,7 @@
         window.setTimeout(() => {
           form.classList.remove('is-submitting');
           setStatus('is-success', 'Your message is ready. Your email app will open now.');
-          window.location.href = `mailto:info@mpaymentsprocessing.com?subject=${subject}&body=${body}`;
+          window.location.href = `mailto:info@wematchflow.com?subject=${subject}&body=${body}`;
         }, 400);
       });
     });
