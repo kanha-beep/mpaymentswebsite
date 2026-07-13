@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We Match Flow</title>
+    <meta name="description" content="We Match Flows delivers global payment, merchant account, IBAN, UPI, and incorporation solutions for growing businesses.">
+    <link rel="stylesheet" href="/assets/css/tailwind-output.css">
+</head>
+
+<body class="bg-slate-50 text-slate-800 antialiased">
+    <!-- <a href="#content" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-full focus:bg-white focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-brand-700">
+            Skip to content
+        </a> -->
+
+    <div class="fixed inset-x-0 top-0 -z-10 overflow-hidden">
+        <div class="mx-auto h-[420px] max-w-[1400px] bg-[radial-gradient(circle_at_18%_18%,rgba(61,115,255,0.18),transparent_28%),radial-gradient(circle_at_85%_8%,rgba(120,160,255,0.14),transparent_22%),linear-gradient(180deg,#f7faff_0%,rgba(247,250,255,0)_100%)]"></div>
+    </div>
+
+    <header id="site-header" class="fixed inset-x-0 top-0 z-40 bg-white shadow-soft transition-all duration-300">
+        <div class="w-full">
+            <div data-header-shell class="flex w-full items-center justify-between bg-white px-4 py-4 sm:px-6 lg:px-8 transition-all duration-300">
+                <a href="/" class="ml-[1rem] lg:ml-[7rem] text-[2rem] font-bold text-black bg-gradient-to-r from-brand-500 via-brand-600 to-ink bg-clip-text text-transparent">
+                        WE + Match + Flow
+                    </a>
+
+                <nav class="hidden items-center gap-8 lg:flex">
+                    <a href="/" class="text-xl font-semibold text-brand-600">Home</a>
+                    <div class="group relative">
+                        <a href="/services.html" class="flex items-center gap-2 text-xl font-semibold text-slate-700 transition hover:text-brand-600">
+                                Services
+                                <span class="text-xs">&#9662;</span>
+                            </a>
+                        <div class="invisible absolute left-1/2 top-full z-20 mt-4 w-[320px] -translate-x-1/2 rounded-3xl border border-slate-200 bg-white p-3 opacity-0  transition duration-200 group-hover:visible group-hover:opacity-100">
+                            <a href="/world-wide-card-processing.html" class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-700">World
+                                    Wide Card Processing</a>
+                            <a href="/company-incorporation-services.html" class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-700">Company
+                                    Incorporation Services</a>
+                            <a href="/upi-alternative-payment-solutions.html" class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-700">UPI
+                                    &amp; Alternative Payment Solutions</a>
+                            <a href="/european-iban-business-accounts.html" class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-700">European
+                                    IBAN Business Accounts</a>
+                            <a href="/website-technology-services.html" class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-700">Website
+                                    &amp; Technology Services</a>
+                        </div>
+                    </div>
+                    <a href="/about-us.html" class="text-xl font-semibold text-slate-700 transition hover:text-brand-600">About
+                            Us</a>
+                    <a href="/contact-us.html" class="text-xl font-semibold text-slate-700 transition hover:text-brand-600">Contact
+                            Us</a>
+                </nav>
+
+                <div class="hidden lg:block">
+                    <a href="#contact" class="inline-flex items-center gap-3 rounded-full bg-brand-500 px-5 py-3 text-sm font-semibold text-white  transition hover:-translate-y-0.5 hover:bg-brand-600">
+                            Schedule Meeting
+                            <span class="text-base">&#8599;</span>
+                        </a>
+                </div>
+
+                <button type="button" data-mobile-toggle aria-expanded="false" aria-controls="mobile-menu" class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 lg:hidden">
+                        <span class="sr-only">Open menu</span>
+                        <span class="space-y-1.5">
+                            <span class="block h-0.5 w-5 bg-current"></span>
+                            <span class="block h-0.5 w-5 bg-current"></span>
+                            <span class="block h-0.5 w-5 bg-current"></span>
+                        </span>
+                    </button>
+            </div>
+
+            <div id="mobile-menu" data-mobile-menu class="hidden border-t border-slate-200 bg-white px-4 pb-4 pt-3 sm:px-6 xl:hidden">
+                <div class="space-y-2">
+                    <a href="/" class="block rounded-2xl bg-brand-50 px-4 py-3 text-sm font-semibold text-brand-700">Home</a>
+                    <div class="rounded-2xl border border-slate-200">
+                        <button type="button" data-submenu-toggle aria-expanded="false" class="flex w-full items-center justify-between px-4 py-3 text-left text-sm font-semibold text-slate-800">
+                                <span>Services</span>
+                                <span>&#9662;</span>
+                            </button>
+                        <div data-submenu class="hidden space-y-1 px-2 pb-2">
+                            <a href="/world-wide-card-processing.html" class="block rounded-2xl px-3 py-2 text-sm text-slate-700 hover:bg-brand-50 hover:text-brand-700">World
+                                    Wide Card Processing</a>
+                            <a href="/company-incorporation-services.html" class="block rounded-2xl px-3 py-2 text-sm text-slate-700 hover:bg-brand-50 hover:text-brand-700">Company
+                                    Incorporation Services</a>
+                            <a href="/upi-alternative-payment-solutions.html" class="block rounded-2xl px-3 py-2 text-sm text-slate-700 hover:bg-brand-50 hover:text-brand-700">UPI
+                                    &amp; Alternative Payment Solutions</a>
+                            <a href="/european-iban-business-accounts.html" class="block rounded-2xl px-3 py-2 text-sm text-slate-700 hover:bg-brand-50 hover:text-brand-700">European
+                                    IBAN Business Accounts</a>
+                            <a href="/website-technology-services.html" class="block rounded-2xl px-3 py-2 text-sm text-slate-700 hover:bg-brand-50 hover:text-brand-700">Website
+                                    &amp; Technology Services</a>
+                        </div>
+                    </div>
+                    <a href="/about-us.html" class="block rounded-2xl px-4 py-3 text-sm font-semibold text-slate-800 hover:bg-brand-50 hover:text-brand-700">About
+                            Us</a>
+                    <a href="/contact-us.html" class="block rounded-2xl px-4 py-3 text-sm font-semibold text-slate-800 hover:bg-brand-50 hover:text-brand-700">Contact
+                            Us</a>
+                    <a href="#contact" class="mt-3 inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-500 px-5 py-3 text-sm font-semibold text-white">Schedule
+                            Meeting <span>&#8599;</span></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="content" class="overflow-hidden">
+        <section class="relative isolate min-h-[720px] sm:min-h-[770px] sm:pt-36">
+
+            <div class="mx-auto grid max-w-[1410px] items-start gap-6 px-4 pb-16 sm:px-6 lg:grid-cols-[1.08fr_0.82fr] lg:px-10 lg:pb-20">
+                <div class="absolute inset-0 -z-20 overflow-hidden">
+                    <video data-home-hero-video class="h-full w-full object-cover" autoplay muted loop playsinline preload="auto" src="https://www.pexels.com/download/video/29448652/" poster="/assets/images/hero-video-poster.png">
+                            <source
+                                src="https://www.pexels.com/download/video/29448652/">
+                        </video>
+                    <!-- <div class="absolute inset-0 bg-[linear-gradient(90deg,rgba(248,248,249,0.72)_0%,rgba(248,248,249,0.64)_40%,rgba(248,248,249,0.34)_100%)]"></div>
+                <div class="absolute inset-0 bg-[radial-gradient(circle_at_18%_45%,rgba(255,255,255,0.22),transparent_32%),radial-gradient(circle_at_80%_42%,rgba(255,255,255,0.18),transparent_26%)]"></div> -->
+                </div>
+                <div data-home-hero-content class="invisible max-w-[640px] pl-0 lg:pl-8 xl:pl-[5rem] pt-16 mt-5">
+                    <div data-reveal class="translate-y-6 opacity-0 transition duration-700">
+                        <span class="inline-flex px-0 py-2 text-[1rem] mt-[2rem] font-semibold uppercase tracking-[0.08em] text-brand-500 sm:text-[1.55rem] lg:text-[1.55rem] lg:mt-[-2rem]">
+                                We Match Flow
+                            </span>
+                    </div>
+                    <div data-reveal class="translate-y-6 opacity-0 transition delay-300 duration-700">
+                        <p class="mt-4  max-w-[700px] text-[2rem] font-bold leading-[1.2] tracking-[-0.04em] text-[#33446f] sm:text-[36px] lg:text-[2rem]">
+                            <span class="block">Your Global Partner</span>
+                            <span class="m-[-1rem] mt-3 inline-block text-brand-500" data-typed='["Multi-Currency","Merchant Accounts","Company Formation","Multi-Currency IBANs"]'>Multi-Currency</span><span class="text-brand-500 ml-3">|</span>
+                            <span class="mt-3 block">Global Payment &amp;
+                                    Banking Solutions</span>
+                        </p>
+                    </div>
+                    <div data-reveal class="translate-y-6 opacity-0 transition delay-300 duration-700">
+                        <p class="mt-7 max-w-[620px] text-[1.125rem] leading-[1.7] text-slate-700 sm:text-[20px] lg:text-[1.20rem] lg:leading-[1.7]">
+                            <strong>We Match Flow</strong> helps
+                            <b>high-risk businesses</b> accept payments smoothly with secure, compliant, and scalable financial solutions across Europe and worldwide.
+                        </p>
+                        <p class="mt-4 max-w-[620px] text-[1.125rem] leading-[1.7] text-slate-700 sm:text-[18px] lg:text-[1.20rem] lg:leading-[1.7]">
+                            From merchant account approvals to international banking, we handle everything, so you can focus on growth.
+                        </p>
+                    </div>
+                    <div data-reveal class="mt-8 flex flex-col gap-4 translate-y-6 opacity-0 transition delay-200 duration-700 sm:flex-row">
+                        <a href="#contact" class="inline-flex min-w-[239px] items-center justify-center gap-3 rounded-[8px] bg-brand-500 px-10 py-[18px] text-[18px] font-semibold text-white  transition hover:-translate-y-0.5 hover:bg-brand-600">
+                                Get Started
+                                <span class="text-base">&#8594;</span>
+                            </a>
+                    </div>
+                </div>
+
+                <div data-home-hero-content class="invisible mt-[-5rem] relative mx-auto flex w-full max-w-[660px] justify-center translate-y-8 opacity-0 transition delay-200 duration-700 lg:-ml-10 lg:justify-end">
+                    <div class="absolute left-[10%] top-[1%] h-36 w-36 rounded-full bg-brand-100/50 blur-3xl"></div>
+                    <div class="absolute bottom-[14%] right-[10%] h-40 w-40 rounded-full bg-sky-100/55 blur-3xl"></div>
+                    <div class="relative w-full max-w-[430px] lg:mr-0 lg:max-w-[485px]">
+                        <img src="/mirror/wp-content/uploads/2026/03/ChatGPT-Image-Mar-3-2026-04_10_23-PM-1-683x1024.png" alt="Global payment and banking globe illustration" class="h-auto w-full object-contain drop-shadow-[0_20px_55px_rgba(56,88,156,0.12)]">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="partners-strip" class="relative bg-white">
+            <!-- <div class="h-[154px] w-full overflow-hidden sm:h-[182px] lg:h-[216px]">
+          <img src="/assets/images/partners-reference.png" alt
+            class="h-full w-full object-cover object-top">
+        </div> -->
+            <div class="relative mx-auto max-w-[1420px] px-4 sm:px-6 lg:px-8">
+                <!-- <div class="-mt-2 flex min-h-[344px] items-start justify-center bg-white sm:-mt-4 lg:min-h-[344px]"> -->
+                <div class="w-full max-w-[1280px] overflow-hidden pt-8 lg:pt-10">
+                    <div data-marquee class="flex gap-5 whitespace-nowrap lg:gap-8">
+                        <div class="flex min-w-max items-center gap-5 lg:gap-8">
+                            <div class="flex h-[110px] w-[190px] items-center justify-center rounded-[30px] bg-white px-8 shadow-[0_22px_60px_rgba(185,198,230,0.35)]">
+                                <img src="/assets/images/partner-alipay.png" alt="Alipay" class="max-h-[42px] w-auto object-contain">
+                            </div>
+                            <div class="flex h-[110px] w-[190px] items-center justify-center rounded-[30px] bg-white px-8 shadow-[0_22px_60px_rgba(185,198,230,0.35)]">
+                                <img src="/assets/images/partner-unionpay.png" alt="UnionPay" class="max-h-[42px] w-auto object-contain">
+                            </div>
+                            <div class="flex h-[110px] w-[190px] items-center justify-center rounded-[30px] bg-white px-8 shadow-[0_22px_60px_rgba(185,198,230,0.35)]">
+                                <img src="/assets/images/partner-upi.png" alt="UPI" class="max-h-[38px] w-auto object-contain">
+                            </div>
+                            <div class="flex h-[110px] w-[190px] items-center justify-center rounded-[30px] bg-white px-8 shadow-[0_22px_60px_rgba(185,198,230,0.35)]">
+                                <img src="/assets/images/partner-fpx.png" alt="FPX" class="max-h-[32px] w-auto object-contain">
+                            </div>
+                            <div class="flex h-[110px] w-[190px] items-center justify-center rounded-[30px] bg-white px-8 shadow-[0_22px_60px_rgba(185,198,230,0.35)]">
+                                <img src="/assets/images/partner-ovo.png" alt="OVO" class="max-h-[34px] w-auto object-contain">
+                            </div>
+                            <div class="flex h-[110px] w-[190px] items-center justify-center rounded-[30px] bg-white px-8 shadow-[0_22px_60px_rgba(185,198,230,0.35)]">
+                                <img src="/assets/images/partner-shopeepay.png" alt="Shopee Pay" class="max-h-[38px] w-auto object-contain">
+                            </div>
+                        </div>
+                        <div aria-hidden="true" class="flex min-w-max items-center gap-5 lg:gap-8">
+                            <div class="flex h-[110px] w-[190px] items-center justify-center rounded-[30px] bg-white px-8 shadow-[0_22px_60px_rgba(185,198,230,0.35)]">
+                                <img src="/assets/images/partner-alipay.png" alt class="max-h-[42px] w-auto object-contain">
+                            </div>
+                            <div class="flex h-[110px] w-[190px] items-center justify-center rounded-[30px] bg-white px-8 shadow-[0_22px_60px_rgba(185,198,230,0.35)]">
+                                <img src="/assets/images/partner-unionpay.png" alt class="max-h-[42px] w-auto object-contain">
+                            </div>
+                            <div class="flex h-[110px] w-[190px] items-center justify-center rounded-[30px] bg-white px-8 shadow-[0_22px_60px_rgba(185,198,230,0.35)]">
+                                <img src="/assets/images/partner-upi.png" alt class="max-h-[38px] w-auto object-contain">
+                            </div>
+                            <div class="flex h-[110px] w-[190px] items-center justify-center rounded-[30px] bg-white px-8 shadow-[0_22px_60px_rgba(185,198,230,0.35)]">
+                                <img src="/assets/images/partner-fpx.png" alt class="max-h-[32px] w-auto object-contain">
+                            </div>
+                            <div class="flex h-[110px] w-[190px] items-center justify-center rounded-[30px] bg-white px-8 shadow-[0_22px_60px_rgba(185,198,230,0.35)]">
+                                <img src="/assets/images/partner-ovo.png" alt class="max-h-[34px] w-auto object-contain">
+                            </div>
+                            <div class="flex h-[110px] w-[190px] items-center justify-center rounded-[30px] bg-white px-8 shadow-[0_22px_60px_rgba(185,198,230,0.35)]">
+                                <img src="/assets/images/partner-shopeepay.png" alt class="max-h-[38px] w-auto object-contain">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- </div> -->
+            </div>
+        </section>
+
+        <section class="py-20 sm:py-24">
+            <div class="mx-auto grid max-w-[1240px] gap-14 px-4 sm:px-6 lg:grid-cols-2 lg:items-center lg:px-8">
+                <div data-reveal class="translate-y-6 opacity-0 transition duration-700">
+                    <span class="text-4xl font-bold uppercase tracking-[0.24em] text-brand-600">About
+                            Us</span>
+                    <h2 class="mt-4 text-xl font-black tracking-[-0.04em] text-ink sm:text-5xl">Built for complex payments and long-term growth</h2>
+                    <p class="mt-6 text-lg leading-8 text-slate-600 sm:text-xl">
+                        We Match Flow is a global financial technology company focused on delivering fast, reliable, and secure payment solutions for businesses of all sizes. We work with startups, growing companies, and established enterprises to simplify complex payment and
+                        financial processes.
+                    </p>
+                    <p class="mt-5 text-lg leading-8 text-slate-600 sm:text-xl lg:text-2xl">
+                        Our services support both <strong>low-risk and
+                                high-risk
+                                merchants</strong>, from global card processing and alternative payment methods to IBAN business accounts and UPI solutions.
+                    </p>
+                    <p class="mt-5 text-lg leading-8 text-slate-600 sm:text-xl">
+                        With a strong focus on innovation, compliance, and security, we deliver scalable infrastructure and dependable support across markets.
+                    </p>
+                </div>
+                <div data-reveal class="translate-y-6 opacity-0 transition duration-700">
+                    <div class="overflow-hidden rounded-[2rem] border border-slate-200 bg-white p-4 shadow-soft">
+                        <img src="/assets/images/about-team.jpg" alt="Business team at office" class="h-full max-h-[560px] w-full rounded-[1.5rem] object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pb-20 sm:pb-24">
+            <div class="mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8">
+                <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+                    <article data-reveal class="translate-y-6 rounded-[2rem] border border-slate-200 bg-white p-7 opacity-0 transition duration-700">
+                        <img src="/assets/images/feature-approvals.jpg" alt class="h-32 w-32 rounded-[1.5rem] object-cover">
+                        <h3 class="mt-6 text-2xl font-bold tracking-[-0.03em] text-ink">High Approval Expertise</h3>
+                        <p class="mt-4 leading-7 text-slate-600">We specialize in high-risk merchant accounts with strong approval ratios and stable acquiring partners.
+                        </p>
+                    </article>
+                    <article data-reveal class="translate-y-6 rounded-[2rem] border border-slate-200 bg-white p-7 opacity-0 transition duration-700">
+                        <img src="/assets/images/feature-banking.png" alt class="h-32 w-32 rounded-[1.5rem] object-contain">
+                        <h3 class="mt-6 text-2xl font-bold tracking-[-0.03em] text-ink">Global Banking
+                        </h3>
+                        <p class="mt-4 leading-7 text-slate-600">International banking network across Europe and global jurisdictions for smooth cross-border operations.
+                        </p>
+                    </article>
+                    <article data-reveal class="translate-y-6 rounded-[2rem] border border-slate-200 bg-white p-7 opacity-0 transition duration-700">
+                        <img src="/assets/images/feature-multicurrency.jpg" alt class="h-32 w-32 rounded-[1.5rem] object-cover">
+                        <h3 class="mt-6 text-2xl font-bold tracking-[-0.03em] text-ink">Multi-Currency Processing
+                        </h3>
+                        <p class="mt-4 leading-7 text-slate-600">Accept and manage payments in multiple currencies with seamless global transaction support.
+                        </p>
+                    </article>
+                    <article data-reveal class="translate-y-6 rounded-[2rem] border border-slate-200 bg-white p-7 opacity-0 transition duration-700">
+                        <img src="/assets/images/feature-security.jpg" alt class="h-32 w-32 rounded-[1.5rem] object-cover">
+                        <h3 class="mt-6 text-2xl font-bold tracking-[-0.03em] text-ink">Fast &amp; Secure</h3>
+                        <p class="mt-4 leading-7 text-slate-600">Quick setup process with structured compliance, risk monitoring, and chargeback management support.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-[linear-gradient(180deg,#eff5ff_0%,#f8fbff_100%)] py-20 sm:py-24">
+            <div class="mx-auto grid max-w-[1240px] gap-10 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
+                <div data-reveal class="translate-y-6 opacity-0 transition duration-700">
+                    <span class="text-sm font-bold uppercase tracking-[0.24em] text-brand-600">What
+                            We Do</span>
+                    <h2 class="mt-4 text-4xl font-black tracking-[-0.04em] text-ink sm:text-5xl">Smart payment infrastructure for high-risk businesses</h2>
+                    <p class="mt-6 text-base leading-8 text-slate-600 sm:text-lg">
+                        At We Match Flows Processing, we deliver secure, compliant, and scalable payment solutions designed for complex industries.
+                    </p>
+                    <p class="mt-4 text-base leading-8 text-slate-600 sm:text-lg">
+                        From high-risk merchant accounts to multi-currency IBAN solutions, we help businesses accept payments globally without limitations.
+                    </p>
+                    <a href="/services.html" class="mt-8 inline-flex items-center gap-3 rounded-full bg-brand-500 px-7 py-4 text-sm font-semibold text-white  transition hover:-translate-y-0.5 hover:bg-brand-600">
+                            Check All Services
+                            <span class="text-base">&#8594;</span>
+                        </a>
+                </div>
+
+                <div class="grid gap-6 md:grid-cols-2">
+                    <article data-reveal class="translate-y-6 rounded-[2rem] bg-white p-7 opacity-0  transition duration-700">
+                        <img src="/assets/images/service-worldwide.png" alt class="h-16 w-16 object-contain">
+                        <h3 class="mt-5 text-2xl font-bold tracking-[-0.03em] text-ink">World Wide Card Processing</h3>
+                        <p class="mt-4 leading-7 text-slate-600">Accept global card payments with multi-currency support and secure international processing. Expand beyond borders with confidence.</p>
+                        <a href="/world-wide-card-processing.html" class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-brand-600">Learn
+                                More <span>&#8594;</span></a>
+                    </article>
+                    <article data-reveal class="translate-y-6 rounded-[2rem] bg-white p-7 opacity-0  transition duration-700">
+                        <img src="/assets/images/service-iban.png" alt class="h-16 w-16 object-contain">
+                        <h3 class="mt-5 text-2xl font-bold tracking-[-0.03em] text-ink">European IBAN Business Account</h3>
+                        <p class="mt-4 leading-7 text-slate-600">Get dedicated European IBAN accounts for seamless euro transactions and smooth international banking across Europe.</p>
+                        <a href="/european-iban-business-accounts.html" class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-brand-600">Learn
+                                More <span>&#8594;</span></a>
+                    </article>
+                    <article data-reveal class="translate-y-6 rounded-[2rem] bg-white p-7 opacity-0  transition duration-700">
+                        <img src="/assets/images/service-incorporation.png" alt class="h-16 w-16 object-contain">
+                        <h3 class="mt-5 text-2xl font-bold tracking-[-0.03em] text-ink">Company Incorporation
+                        </h3>
+                        <p class="mt-4 leading-7 text-slate-600">Start your company with confidence. We manage the complete incorporation process so you can focus on growing your business.</p>
+                        <a href="/company-incorporation-services.html" class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-brand-600">Learn
+                                More <span>&#8594;</span></a>
+                    </article>
+                    <article data-reveal class="translate-y-6 rounded-[2rem] bg-white p-7 opacity-0  transition duration-700">
+                        <img src="/assets/images/service-upi.png" alt class="h-16 w-16 object-contain">
+                        <h3 class="mt-5 text-2xl font-bold tracking-[-0.03em] text-ink">UPI Solution &amp; Services</h3>
+                        <p class="mt-4 leading-7 text-slate-600">Accept fast, secure, and seamless UPI payments designed for the Indian market. Enable smooth digital transactions for customers and merchants.</p>
+                        <a href="/upi-alternative-payment-solutions.html" class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-brand-600">Learn
+                                More <span>&#8594;</span></a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-20 sm:py-24">
+            <div class="mx-auto grid max-w-[1240px] gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
+                <div data-reveal class="translate-y-6 opacity-0 transition duration-700">
+                    <span class="text-sm font-bold uppercase tracking-[0.24em] text-brand-600">Contact
+                            Us</span>
+                    <h2 class="mt-4 text-4xl font-black tracking-[-0.04em] text-ink sm:text-5xl">Get in touch with us</h2>
+                    <p class="mt-6 text-base leading-8 text-slate-600 sm:text-lg">
+                        Have questions about merchant accounts, IBAN solutions, company incorporation, or UPI services? Our team is ready to guide you with secure, reliable, and scalable payment solutions.
+                    </p>
+
+                    <div class="mt-10 space-y-5">
+                        <div class="flex items-start gap-4 rounded-[1.5rem] border border-slate-200 bg-white p-5 shadow-sm">
+                            <div class="flex h-12 w-12 items-center justify-center rounded-full bg-brand-50 text-brand-600">&#9742;</div>
+                            <div>
+                                <h3 class="text-lg font-bold text-ink">Office Phone Number
+                                </h3>
+                                <p class="mt-1 text-slate-600">+1-(907) 487-4575
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 rounded-[1.5rem] border border-slate-200 bg-white p-5 shadow-sm">
+                            <div class="flex h-12 w-12 items-center justify-center rounded-full bg-brand-50 text-brand-600">&#9993;</div>
+                            <div>
+                                <h3 class="text-lg font-bold text-ink">Office Email
+                                </h3>
+                                <p class="mt-1 text-slate-600">info@wematchflow.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-reveal class="translate-y-6 opacity-0 transition duration-700">
+                    <form class="js-contact-form rounded-[2rem] border border-slate-200 bg-white p-7 shadow-soft sm:p-8" data-page-name="Home" novalidate>
+                        <div class="grid gap-5">
+                            <div>
+                                <label for="contact-name" class="mb-2 block text-sm font-semibold text-slate-700">Name</label>
+                                <input id="contact-name" name="name" type="text" class="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-4 text-sm text-slate-800 outline-none transition focus:border-brand-400 focus:bg-white focus:ring-4 focus:ring-brand-100">
+                            </div>
+                            <div>
+                                <label for="contact-email" class="mb-2 block text-sm font-semibold text-slate-700">Email</label>
+                                <input id="contact-email" name="email" type="email" required class="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-4 text-sm text-slate-800 outline-none transition focus:border-brand-400 focus:bg-white focus:ring-4 focus:ring-brand-100">
+                            </div>
+                            <div>
+                                <label for="contact-message" class="mb-2 block text-sm font-semibold text-slate-700">Your
+                                        Message (optional)</label>
+                                <textarea id="contact-message" name="message" rows="7" class="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-4 text-sm text-slate-800 outline-none transition focus:border-brand-400 focus:bg-white focus:ring-4 focus:ring-brand-100"></textarea>
+                            </div>
+                            <button type="submit" class="inline-flex items-center justify-center rounded-full bg-brand-500 px-6 py-4 text-sm font-semibold text-white  transition hover:-translate-y-0.5 hover:bg-brand-600">
+                                    Submit
+                                </button>
+                            <p data-form-status class="hidden rounded-2xl px-4 py-3 text-sm font-medium"></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-ink text-white">
+        <div class="mx-auto max-w-[1240px] px-4 py-16 sm:px-6 lg:px-8">
+            <div class="grid gap-10 md:grid-cols-2 xl:grid-cols-4">
+                <div>
+                    <h2 class="text-3xl font-black tracking-[-0.03em]">We Match Flow
+                    </h2>
+                    <p class="mt-5 max-w-[280px] text-sm leading-7 text-slate-300">
+                        Global merchant account, IBAN, UPI, and business setup support for ambitious companies operating across markets.
+                    </p>
+                    <div class="mt-6 space-y-3 text-sm text-slate-300">
+                        <p>+1-(203) 975-0263</p>
+                        <p>info@wematchflow.com</p>
+                        <p>Stamford, Connecticut (CT), 06901</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold">Other Pages</h3>
+                    <div class="mt-5 space-y-3 text-sm text-slate-300">
+                        <a href="/" class="block transition hover:text-white">Home</a>
+                        <a href="/about-us.html" class="block transition hover:text-white">About</a>
+                        <a href="/services.html" class="block transition hover:text-white">Services</a>
+                        <a href="/contact-us.html" class="block transition hover:text-white">Contact</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold">Quick Links</h3>
+                    <div class="mt-5 space-y-3 text-sm text-slate-300">
+                        <span class="block">Privacy Policy</span>
+                        <span class="block">Term of Services</span>
+                        <span class="block">Blogs</span>
+                        <span class="block">FAQ</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold">Work Hours</h3>
+                    <p class="mt-5 text-sm text-slate-300">Mon-Fri 09:00-11:00
+                    </p>
+                    <p class="mt-4 max-w-[260px] text-sm leading-7 text-slate-300">
+                        Fast consultation, structured onboarding, and responsive support for global payment operations.
+                    </p>
+                    <a href="#contact" class="mt-7 inline-flex items-center gap-3 rounded-full bg-brand-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-brand-600">
+                            Schedule Meeting
+                        </a>
+                </div>
+            </div>
+
+            <div class="mt-12 border-t border-white/10 pt-6 text-sm text-slate-400">
+                All rights reserved
+            </div>
+        </div>
+    </footer>
+
+    <a href="tel:+19074874575" class="fixed bottom-5 right-5 z-30 flex h-14 w-14 items-center justify-center rounded-full bg-brand-500 text-xl text-white  transition hover:-translate-y-0.5 hover:bg-brand-600" aria-label="Call us">
+            &#9742;
+        </a>
+
+    <button type="button" data-back-to-top class="fixed bottom-24 right-5 z-30 hidden h-14 w-14 items-center justify-center rounded-full border border-slate-200 bg-white text-xl text-slate-700  transition hover:-translate-y-0.5" aria-label="Back to top">
+            &#8593;
+        </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script defer src="/assets/js/email-config.js"></script>
+    <script defer src="/assets/js/site.js"></script>
+</body>
+
+</html>
