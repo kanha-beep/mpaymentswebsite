@@ -87,6 +87,11 @@
 
             if (!items.length) return;
 
+            // Keep the caret visually attached to the typed word instead of the
+            // reserved Tailwind min-width, while leaving the classes untouched.
+            node.style.minWidth = "0";
+            node.style.width = "auto";
+
             let itemIndex = 0;
             let charIndex = 0;
             let deleting = false;
