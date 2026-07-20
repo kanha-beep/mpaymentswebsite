@@ -51,7 +51,7 @@ foreach ($file in $assetFiles) {
     }
 }
 
-$headInjection = "`r`n<link rel='stylesheet' href='/assets/css/global.css'>`r`n</head>"
+$headInjection = "`r`n<link rel='stylesheet' href='/assets/css/tailwind-output.css'>`r`n</head>"
 $bodyInjection = "`r`n<script defer src='/assets/js/site.js'></script>`r`n</body>"
 
 foreach ($file in $htmlFiles) {
@@ -64,7 +64,7 @@ foreach ($file in $htmlFiles) {
     $updated = [regex]::Replace($updated, '<meta name="generator"[^>]*>\s*', '', 'IgnoreCase')
     $updated = [regex]::Replace($updated, '<script type="speculationrules">[\s\S]*?</script>\s*', '', 'IgnoreCase')
 
-    if ($updated -notmatch '/assets/css/global\.css') {
+    if ($updated -notmatch '/assets/css/tailwind-output\.css') {
         $updated = $updated.Replace('</head>', $headInjection)
     }
 

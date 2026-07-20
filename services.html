@@ -9,47 +9,49 @@
 </head>
 
 <body class="bg-slate-50 text-slate-800 antialiased">
-    <header id="site-header" class="fixed inset-x-0 top-0 z-40 bg-white shadow-soft transition-all duration-300">
+    <header id="site-header" data-transparent-header class="group fixed inset-x-0 top-0 z-40 bg-transparent hover:bg-white shadow-none backdrop-blur-sm transition-all duration-300">
         <div class="w-full">
-            <div data-header-shell class="flex w-full items-center justify-between bg-white px-4 py-4 sm:px-6 lg:px-8 transition-all duration-300">
-                <a href="/" class="ml-[7rem] text-[2rem] font-bold text-black bg-gradient-to-r from-brand-500 via-brand-600 to-ink bg-clip-text text-transparent">
+            <div data-header-shell class="flex w-full items-center justify-between bg-transparent p-8 transition-all duration-300 group-hover:bg-white sm:px-6 lg:px-8">
+                <a href="/" data-nav-logo class="ml-[1rem] lg:ml-[7rem] text-[2.5rem] font-bold text-black transition duration-300 group-hover:text-black bg-gradient-to-r from-blue-700 to-cyan-700 text-transparent bg-clip-text">
                         WE + Match + Flow
                     </a>
 
                 <nav class="hidden items-center gap-8 lg:flex">
-                    <a href="/" class="text-xl font-semibold text-brand-600">Home</a>
-                    <div class="group relative">
-                        <a href="/services.html" class="flex items-center gap-2 text-xl font-semibold text-slate-700 transition hover:text-brand-600">
+                    <a href="/" data-nav-link class="nav-underline-link text-xl font-semibold text-black transition-colors duration-300 ease-in-out hover:text-yellow-500">Home</a>
+                    <div class="relative">
+                        <a href="/services.html" data-nav-link class="nav-underline-link peer flex items-center gap-2 text-xl font-medium text-black transition-colors duration-300 ease-in-out hover:text-yellow-500">
                                 Services
                                 <span class="text-xs">&#9662;</span>
                             </a>
-                        <div class="invisible absolute left-1/2 top-full z-20 mt-4 w-[320px] -translate-x-1/2 rounded-3xl border border-slate-200 bg-white p-3 opacity-0  transition duration-200 group-hover:visible group-hover:opacity-100">
-                            <a href="/world-wide-card-processing.html" class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-700">World
+                        <div class="invisible absolute left-1/2 top-full z-20 w-[320px] -translate-x-1/2 pt-4 opacity-0 transition duration-200 peer-hover:visible peer-hover:opacity-100 hover:visible hover:opacity-100">
+                            <div class="rounded-3xl border border-slate-200 bg-white p-3">
+                                <a href="/world-wide-card-processing.html" class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-700">World
                                     Wide Card Processing</a>
-                            <a href="/company-incorporation-services.html" class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-700">Company
+                                <a href="/company-incorporation-services.html" class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-700">Company
                                     Incorporation Services</a>
-                            <a href="/upi-alternative-payment-solutions.html" class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-700">UPI
+                                <a href="/upi-alternative-payment-solutions.html" class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-700">UPI
                                     &amp; Alternative Payment Solutions</a>
-                            <a href="/european-iban-business-accounts.html" class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-700">European
+                                <a href="/european-iban-business-accounts.html" class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-700">European
                                     IBAN Business Accounts</a>
-                            <a href="/website-technology-services.html" class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-700">Website
+                                <a href="/website-technology-services.html" class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-700">Website
                                     &amp; Technology Services</a>
+                            </div>
                         </div>
                     </div>
-                    <a href="/about-us.html" class="text-xl font-semibold text-slate-700 transition hover:text-brand-600">About
+                    <a href="/about-us.html" data-nav-link class="nav-underline-link text-xl font-semibold text-black transition-colors duration-700 ease-in-out hover:text-yellow-500">About
                             Us</a>
-                    <a href="/contact-us.html" class="text-xl font-semibold text-slate-700 transition hover:text-brand-600">Contact
+                    <a href="/contact-us.html" data-nav-link class="nav-underline-link text-xl font-semibold text-black transition-colors duration-700 ease-in-out hover:text-yellow-500">Contact
                             Us</a>
                 </nav>
 
                 <div class="hidden lg:block">
-                    <a href="#contact" class="inline-flex items-center gap-3 rounded-full bg-brand-500 px-5 py-3 text-sm font-semibold text-white  transition hover:-translate-y-0.5 hover:bg-brand-600">
+                    <a href="/contact-us.html" class="inline-flex items-center gap-3 rounded-full bg-brand-500 px-5 py-3 text-sm font-semibold text-white  transition hover:-translate-y-0.5 hover:bg-brand-600">
                             Schedule Meeting
                             <span class="text-base">&#8599;</span>
                         </a>
                 </div>
 
-                <button type="button" data-mobile-toggle aria-expanded="false" aria-controls="mobile-menu" class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 lg:hidden">
+                <button type="button" data-mobile-toggle data-nav-toggle aria-expanded="false" aria-controls="mobile-menu" class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/10 text-white backdrop-blur-sm transition duration-300 group-hover:border-slate-200 group-hover:bg-white group-hover:text-black lg:hidden">
                         <span class="sr-only">Open menu</span>
                         <span class="space-y-1.5">
                             <span class="block h-0.5 w-5 bg-current"></span>
@@ -62,11 +64,13 @@
             <div id="mobile-menu" data-mobile-menu class="hidden border-t border-slate-200 bg-white px-4 pb-4 pt-3 sm:px-6 xl:hidden">
                 <div class="space-y-2">
                     <a href="/" class="block rounded-2xl bg-brand-50 px-4 py-3 text-sm font-semibold text-brand-700">Home</a>
+                    <!-- Mobile services section with expandable submenu -->
                     <div class="rounded-2xl border border-slate-200">
                         <button type="button" data-submenu-toggle aria-expanded="false" class="flex w-full items-center justify-between px-4 py-3 text-left text-sm font-semibold text-slate-800">
                                 <span>Services</span>
                                 <span>&#9662;</span>
                             </button>
+                        <!-- Mobile services submenu links -->
                         <div data-submenu class="hidden space-y-1 px-2 pb-2">
                             <a href="/world-wide-card-processing.html" class="block rounded-2xl px-3 py-2 text-sm text-slate-700 hover:bg-brand-50 hover:text-brand-700">World
                                     Wide Card Processing</a>
@@ -84,7 +88,8 @@
                             Us</a>
                     <a href="/contact-us.html" class="block rounded-2xl px-4 py-3 text-sm font-semibold text-slate-800 hover:bg-brand-50 hover:text-brand-700">Contact
                             Us</a>
-                    <a href="#contact" class="mt-3 inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-500 px-5 py-3 text-sm font-semibold text-white">Schedule
+                    <!-- Mobile CTA button -->
+                    <a href="/contact-us.html" class="mt-3 inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-500 px-5 py-3 text-sm font-semibold text-white">Schedule
                             Meeting <span>&#8599;</span></a>
                 </div>
             </div>
@@ -93,16 +98,16 @@
 
     <main class="services-bg overflow-hidden pt-32 sm:pt-36">
         <section class="mx-auto max-w-[1240px] px-4 py-16 sm:px-6 lg:px-8">
-            <div class="text-center">
+            <div data-reveal class="translate-y-6 opacity-0 transition duration-700 text-center">
                 <span class="text-[16px] font-medium uppercase tracking-[0.2em] text-brand-500">What We Do</span>
                 <h1 class="mx-auto mt-4 max-w-[1080px] text-[34px] font-medium tracking-[-0.045em] text-[#364668] sm:text-[46px] lg:text-[58px]">Smart Payment Infrastructure for High-Risk Businesses</h1>
             </div>
 
             <div class="mx-auto mt-16 max-w-[1120px]">
                 <div class="grid gap-y-20 lg:grid-cols-3 lg:gap-x-10">
-                    <article class="grid items-start gap-5 text-left sm:grid-cols-[108px_1fr] lg:pt-7">
+                    <article data-reveal class="translate-y-6 opacity-0 transition duration-700 grid items-start gap-5 text-left sm:grid-cols-[108px_1fr] lg:pt-7">
                         <div class="flex h-[108px] w-[108px] items-center justify-center rounded-[4px] bg-[#f4f8ff] shadow-[0_12px_34px_rgba(213,225,247,0.34)]">
-                            <img src="/assets/images/service-worldwide.png" alt="Worldwide card processing" class="h-[110px] w-[110px] object-contain">
+                            <img src="/assets/images/service-worldwide.png" alt="Worldwide card processing" loading="lazy" class="h-[110px] w-[110px] object-contain">
                         </div>
                         <div class="max-w-[310px]">
                             <h2 class="text-[28px] font-semibold leading-[1.05] tracking-[-0.04em] text-brand-500">Worldwide Card Processing</h2>
@@ -110,21 +115,21 @@
                         </div>
                     </article>
 
-                    <article class="text-center">
+                    <article data-reveal class="translate-y-6 opacity-0 transition duration-700 text-center">
                         <div class="mx-auto flex h-[108px] w-[108px] items-center justify-center rounded-[4px] bg-[#f4f8ff] shadow-[0_12px_34px_rgba(213,225,247,0.34)]">
-                            <img src="/assets/images/service-iban.png" alt="European IBAN business accounts" class="h-[74px] w-[74px] object-contain">
+                            <img src="/assets/images/service-iban.png" alt="European IBAN business accounts" loading="lazy" class="h-[74px] w-[74px] object-contain">
                         </div>
                         <h2 class="mx-auto mt-7 max-w-[430px] text-[28px] font-semibold leading-[1.05] tracking-[-0.04em] text-brand-500">European IBAN Business Accounts</h2>
                         <p class="mx-auto mt-2 max-w-[390px] text-[17px] leading-[1.74] text-slate-600">Business-ready European IBAN accounts to support international settlements and financial management.</p>
                     </article>
 
-                    <article class="grid items-start gap-5 text-left sm:grid-cols-[1fr_108px] sm:text-right lg:pt-7">
+                    <article data-reveal class="translate-y-6 opacity-0 transition duration-700 grid items-start gap-5 text-left sm:grid-cols-[1fr_108px] sm:text-right lg:pt-7">
                         <div class="order-2 sm:order-1 sm:ml-auto sm:max-w-[325px]">
                             <h2 class="text-[28px] font-semibold leading-[1.05] tracking-[-0.04em] text-brand-500">UPI &amp; Alternative Payment Solutions</h2>
                             <p class="mt-2 text-[17px] leading-[1.74] text-slate-600">Integrated UPI and alternative payment options that support digital-first customers and local payment preferences.</p>
                         </div>
                         <div class="order-1 flex h-[108px] w-[108px] items-center justify-center rounded-[4px] bg-[#f4f8ff] shadow-[0_12px_34px_rgba(213,225,247,0.34)] sm:order-2 sm:justify-self-end">
-                            <img src="/assets/images/service-upi.png" alt="UPI and alternative payment solutions" class="h-[94px] w-[94px] object-contain">
+                            <img src="/assets/images/service-upi.png" alt="UPI and alternative payment solutions" loading="lazy" class="h-[94px] w-[94px] object-contain">
                         </div>
                     </article>
                 </div>
@@ -132,9 +137,9 @@
                 <div class="mt-20 grid gap-y-20 lg:grid-cols-3 lg:gap-x-10">
                     <div class="hidden lg:block"></div>
 
-                    <article class="grid items-start gap-5 text-left sm:grid-cols-[108px_1fr] lg:col-start-1 lg:col-end-2">
+                    <article data-reveal class="translate-y-6 opacity-0 transition duration-700 grid items-start gap-5 text-left sm:grid-cols-[108px_1fr] lg:col-start-1 lg:col-end-2">
                         <div class="flex h-[108px] w-[108px] items-center justify-center rounded-[4px] bg-[#f4f8ff] shadow-[0_12px_34px_rgba(213,225,247,0.34)]">
-                            <img src="/assets/images/service-incorporation.png" alt="Company incorporation services" class="h-[100px] w-[100px] object-contain">
+                            <img src="/assets/images/service-incorporation.png" alt="Company incorporation services" loading="lazy" class="h-[100px] w-[100px] object-contain">
                         </div>
                         <div class="max-w-[300px]">
                             <h2 class="text-[28px] font-semibold leading-[1.05] tracking-[-0.04em] text-brand-500">Company Incorporation Services</h2>
@@ -142,7 +147,7 @@
                         </div>
                     </article>
 
-                    <article class="grid items-start gap-5 text-left sm:grid-cols-[1fr_108px] sm:text-right lg:col-start-3 lg:col-end-4">
+                    <article data-reveal class="translate-y-6 opacity-0 transition duration-700 grid items-start gap-5 text-left sm:grid-cols-[1fr_108px] sm:text-right lg:col-start-3 lg:col-end-4">
                         <div class="order-2 sm:order-1 sm:ml-auto sm:max-w-[310px]">
                             <h2 class="text-[28px] font-semibold leading-[1.05] tracking-[-0.04em] text-brand-500">Website &amp; Technology Services</h2>
                             <p class="mt-2 text-[17px] leading-[1.74] text-slate-600">Professional website design and advanced integrations to enhance digital presence and scalability.</p>
@@ -165,7 +170,7 @@
         </section>
 
         <section class="mx-auto max-w-[1240px] px-4 py-10 sm:px-6 lg:px-8">
-            <div class="text-center">
+            <div data-reveal class="translate-y-6 opacity-0 transition duration-700 text-center">
                 <h2 class="text-4xl font-semibold tracking-[-0.04em] text-[#404a68] sm:text-5xl lg:text-[58px]">Why Partner With Us</h2>
                 <p class="mx-auto mt-5 max-w-[980px] text-[18px] leading-[1.7] text-slate-500 sm:text-[19px]">We focus on building long-term partnerships with secure infrastructure, adaptable technology, and dependable support.</p>
             </div>
@@ -230,7 +235,7 @@
 
         <section class="mx-auto max-w-[1240px] px-4 py-16 sm:px-6 lg:px-8">
             <div class="grid items-center gap-12 lg:grid-cols-[0.95fr_1.05fr]">
-                <div>
+                <div data-reveal class="translate-y-6 opacity-0 transition duration-700">
                     <span class="text-sm font-semibold uppercase tracking-[0.22em] text-brand-500">Additional Offerings</span>
                     <h2 class="mt-5 max-w-[720px] text-4xl font-semibold tracking-[-0.04em] text-[#404a68] sm:text-5xl lg:text-[54px]">Complementary Solutions to Power Your Business Growth</h2>
                     <p class="mt-8 max-w-[710px] text-[18px] leading-[1.72] text-slate-500 sm:text-[19px]">We provide integrated services designed to simplify operations, reduce vendor dependency, and support your business at every stage. Our additional offerings ensure smooth financial processing, flexible payment capabilities, and complete
@@ -269,7 +274,7 @@
                     </div>
                 </div>
 
-                <div class="offer-illustration">
+                <div data-reveal class="translate-y-6 opacity-0 transition duration-700 offer-illustration">
                     <div class="offer-phone"></div>
                     <div class="offer-star-strip">
                         <div class="flex items-center justify-center gap-3 text-[28px] text-yellow-300">

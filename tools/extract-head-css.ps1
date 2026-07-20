@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = "Stop"
 
 $workspaceRoot = (Get-Location).Path
-$cssPath = Join-Path $workspaceRoot 'assets\css\index.css'
+$cssPath = Join-Path $workspaceRoot 'assets\css\legacy-head-styles.css'
 $htmlFiles = Get-ChildItem -Path $workspaceRoot -Recurse -Filter *.html
 $blocks = New-Object System.Collections.Generic.List[string]
 $seen = @{}
@@ -32,8 +32,8 @@ foreach ($file in $htmlFiles) {
     }
 
     $cleanHead = [regex]::Replace($head, '<style[^>]*>[\s\S]*?</style>\s*', '', 'IgnoreCase')
-    if ($cleanHead -notmatch '/assets/css/index\.css') {
-        $cleanHead = $cleanHead.Replace("</head>", "`r`n<link rel='stylesheet' href='/assets/css/index.css'>`r`n</head>")
+    if ($cleanHead -notmatch '/assets/css/legacy-head-styles\.css') {
+        $cleanHead = $cleanHead.Replace("</head>", "`r`n<link rel='stylesheet' href='/assets/css/legacy-head-styles.css'>`r`n</head>")
     }
 
     $updated = $content.Substring(0, $headMatch.Index) + $cleanHead + $content.Substring($headMatch.Index + $headMatch.Length)

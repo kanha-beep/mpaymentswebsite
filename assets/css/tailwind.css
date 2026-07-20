@@ -2,7 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background:
+      radial-gradient(circle at 12% 14%, rgba(79, 128, 255, 0.12), transparent 28%),
+      radial-gradient(circle at 88% 16%, rgba(61, 115, 255, 0.08), transparent 24%),
+      radial-gradient(circle at 50% 100%, rgba(96, 91, 229, 0.08), transparent 26%);
+    z-index: 0;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
 @layer components {
+  .nav-underline-link {
+    @apply relative transition duration-300 after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-current after:transition-transform after:duration-300 after:content-[''] hover:after:scale-x-100;
+  }
+
   .services-bg {
     background:
       radial-gradient(circle at 12% 18%, rgba(98, 140, 255, 0.1), transparent 24%),
@@ -203,6 +243,11 @@
     right: 7%;
     top: 28%;
     animation-delay: 0.9s;
+  }
+
+  .site-shell {
+    position: relative;
+    z-index: 1;
   }
 }
 

@@ -14,15 +14,25 @@
         const heroSection = document.querySelector("main > section");
         if (!header || !shell) return;
 
+        let stickyThreshold = 12;
+
+        const updateThreshold = () => {
+            stickyThreshold = heroSection ? Math.max(heroSection.offsetHeight / 2, 12) : 12;
+        };
+
         const update = () => {
-            const stickyThreshold = heroSection ? Math.max(heroSection.offsetHeight / 2, 12) : 12;
             const stuck = window.scrollY > stickyThreshold;
+            header.classList.toggle("shadow-none", !stuck);
             header.classList.toggle("shadow-soft", stuck);
         };
 
+        updateThreshold();
         update();
         window.addEventListener("scroll", update, { passive: true });
-        window.addEventListener("resize", update);
+        window.addEventListener("resize", () => {
+            updateThreshold();
+            update();
+        });
     };
 
     const initMobileMenu = () => {
@@ -80,8 +90,12 @@
             let itemIndex = 0;
             let charIndex = 0;
             let deleting = false;
+            let paused = false;
+            let timerId = 0;
 
             const tick = () => {
+                if (paused) return;
+
                 const word = items[itemIndex];
 
                 if (!deleting) {
@@ -89,10 +103,10 @@
                     node.textContent = word.slice(0, charIndex);
                     if (charIndex === word.length) {
                         deleting = true;
-                        window.setTimeout(tick, 1400);
+                        timerId = window.setTimeout(tick, 1400);
                         return;
                     }
-                    window.setTimeout(tick, 70);
+                    timerId = window.setTimeout(tick, 70);
                     return;
                 }
 
@@ -101,13 +115,40 @@
                 if (charIndex <= 0) {
                     deleting = false;
                     itemIndex = (itemIndex + 1) % items.length;
-                    window.setTimeout(tick, 260);
+                    timerId = window.setTimeout(tick, 260);
                     return;
                 }
-                window.setTimeout(tick, 38);
+                timerId = window.setTimeout(tick, 38);
             };
 
+            const setPaused = (nextPaused) => {
+                if (paused === nextPaused) return;
+                paused = nextPaused;
+
+                if (paused) {
+                    window.clearTimeout(timerId);
+                    return;
+                }
+
+                tick();
+            };
+
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        setPaused(!entry.isIntersecting);
+                    });
+                },
+                { threshold: 0.1 },
+            );
+
+            observer.observe(node);
             tick();
+
+            window.addEventListener("beforeunload", () => {
+                window.clearTimeout(timerId);
+                observer.disconnect();
+            }, { once: true });
         });
     };
 
@@ -139,9 +180,12 @@
         let offset = 0;
         let frameId = 0;
         let paused = false;
+        let inView = true;
+
+        const shouldAnimate = () => !paused && inView;
 
         const animate = () => {
-            if (!paused) {
+            if (shouldAnimate()) {
                 offset -= 1;
                 if (Math.abs(offset) >= marquee.scrollWidth / 2) {
                     offset = 0;
@@ -160,8 +204,22 @@
             paused = false;
         });
 
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    inView = entry.isIntersecting;
+                });
+            },
+            { threshold: 0.05 },
+        );
+
+        observer.observe(marquee);
+
         frameId = window.requestAnimationFrame(animate);
-        window.addEventListener("beforeunload", () => window.cancelAnimationFrame(frameId), {
+        window.addEventListener("beforeunload", () => {
+            window.cancelAnimationFrame(frameId);
+            observer.disconnect();
+        }, {
             once: true,
         });
     };
@@ -183,18 +241,6 @@
     };
 
     const initForms = () => {
-        const emailJsConfig = window.EMAILJS_CONFIG;
-        const emailJsReady = !!window.emailjs &&
-            !!emailJsConfig &&
-            emailJsConfig.publicKey &&
-            emailJsConfig.serviceId &&
-            emailJsConfig.templateId &&
-            !String(emailJsConfig.publicKey).startsWith("YOUR_");
-
-        if (emailJsReady) {
-            window.emailjs.init({ publicKey: emailJsConfig.publicKey });
-        }
-
         document.querySelectorAll(".js-contact-form").forEach((form) => {
             const status = form.querySelector("[data-form-status]");
             const fields = [...form.querySelectorAll("input, textarea")];
@@ -239,33 +285,30 @@
                 const message = form.querySelector('[name="message"]')?.value.trim() || "";
                 const pageName = form.getAttribute("data-page-name") || document.title || "Website";
 
-                if (emailJsReady) {
-                    try {
-                        await window.emailjs.send(emailJsConfig.serviceId, emailJsConfig.templateId, {
-                            from_name: name,
-                            from_email: email,
+                try {
+                    const response = await fetch("/api/contact", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify({
+                            name,
+                            email,
                             message,
-                            page_name: pageName,
-                            website_name: "We Match Flows",
-                            reply_to: email,
-                        });
+                            pageName,
+                        }),
+                    });
 
-                        form.reset();
-                        fields.forEach((field) => setFieldState(field, true));
-                        setStatus("success", "Thanks. Your message has been sent successfully.");
-                        return;
-                    } catch {
-                        setStatus("error", "We could not send your message right now. Please try again.");
-                        return;
+                    if (!response.ok) {
+                        throw new Error("Unable to send message");
                     }
-                }
 
-                const subject = encodeURIComponent("Website enquiry from We Match Flows");
-                const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
-                setStatus("success", "Your message is ready. Your email app will open now.");
-                window.setTimeout(() => {
-                    window.location.href = `mailto:info@wematchflow.com?subject=${subject}&body=${body}`;
-                }, 350);
+                    form.reset();
+                    fields.forEach((field) => setFieldState(field, true));
+                    setStatus("success", "Thanks. Your message has been sent successfully.");
+                } catch {
+                    setStatus("error", "We could not send your message right now. Please try again.");
+                }
             });
         });
     };
