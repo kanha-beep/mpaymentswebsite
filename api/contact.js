@@ -22,9 +22,11 @@ module.exports = async (req, res) => {
         return res.status(405).json({ error: "Method not allowed" });
     }
 
-    const { name = "", email = "", message = "", pageName = "Website" } = parseBody(req.body);
+    const { name = "", email = "", companyUrl = "", telegramHandle = "", message = "", pageName = "Website" } = parseBody(req.body);
     const trimmedName = String(name).trim();
     const trimmedEmail = String(email).trim();
+    const trimmedCompanyUrl = String(companyUrl).trim();
+    const trimmedTelegramHandle = String(telegramHandle).trim();
     const trimmedMessage = String(message).trim();
     const trimmedPageName = String(pageName).trim() || "Website";
 
@@ -33,7 +35,7 @@ module.exports = async (req, res) => {
     }
 
     const {
-        SMTP_HOST = "smtp.gmail.com",
+        SMTP_HOST = "smtpout.secureserver.net",
         SMTP_PORT = "465",
         SMTP_SECURE = "true",
         SMTP_USER,
@@ -65,6 +67,8 @@ module.exports = async (req, res) => {
                 `Page: ${trimmedPageName}`,
                 `Name: ${trimmedName || "Not provided"}`,
                 `Email: ${trimmedEmail}`,
+                `Company URL: ${trimmedCompanyUrl || "Not provided"}`,
+                `Telegram: ${trimmedTelegramHandle || "Not provided"}`,
                 "",
                 "Message:",
                 trimmedMessage || "No message provided",

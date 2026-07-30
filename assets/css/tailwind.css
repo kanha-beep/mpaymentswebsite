@@ -132,6 +132,27 @@
     animation-delay: 0.45s;
   }
 
+  .partner-marquee {
+    width: max-content;
+    gap: 1.25rem;
+    animation: partnerMarquee 24s linear infinite;
+    will-change: transform;
+  }
+
+  .partner-marquee__group {
+    flex-shrink: 0;
+  }
+
+  .partner-marquee:hover {
+    animation-play-state: running;
+  }
+
+  @media (min-width: 1024px) {
+    .partner-marquee {
+      gap: 2rem;
+    }
+  }
+
   .offer-illustration {
     position: relative;
     min-height: 560px;
@@ -261,6 +282,16 @@
   50% {
     transform: scale(1.08);
     box-shadow: 0 16px 34px rgba(92, 126, 244, 0.18);
+  }
+}
+
+@keyframes partnerMarquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(-50%, 0, 0);
   }
 }
 

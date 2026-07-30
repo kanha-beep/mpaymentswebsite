@@ -181,52 +181,6 @@
     const initMarquee = () => {
         const marquee = document.querySelector("[data-marquee]");
         if (!marquee) return;
-
-        let offset = 0;
-        let frameId = 0;
-        let paused = false;
-        let inView = true;
-
-        const shouldAnimate = () => !paused && inView;
-
-        const animate = () => {
-            if (shouldAnimate()) {
-                offset -= 1;
-                if (Math.abs(offset) >= marquee.scrollWidth / 2) {
-                    offset = 0;
-                }
-                marquee.style.transform = `translate3d(${offset}px, 0, 0)`;
-            }
-
-            frameId = window.requestAnimationFrame(animate);
-        };
-
-        marquee.addEventListener("mouseenter", () => {
-            paused = true;
-        });
-
-        marquee.addEventListener("mouseleave", () => {
-            paused = false;
-        });
-
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    inView = entry.isIntersecting;
-                });
-            },
-            { threshold: 0.05 },
-        );
-
-        observer.observe(marquee);
-
-        frameId = window.requestAnimationFrame(animate);
-        window.addEventListener("beforeunload", () => {
-            window.cancelAnimationFrame(frameId);
-            observer.disconnect();
-        }, {
-            once: true,
-        });
     };
 
     const initBackToTop = () => {
@@ -287,6 +241,8 @@
 
                 const name = form.querySelector('[name="name"]')?.value.trim() || "";
                 const email = form.querySelector('[name="email"]')?.value.trim() || "";
+                const companyUrl = form.querySelector('[name="companyUrl"]')?.value.trim() || "";
+                const telegramHandle = form.querySelector('[name="telegramHandle"]')?.value.trim() || "";
                 const message = form.querySelector('[name="message"]')?.value.trim() || "";
                 const pageName = form.getAttribute("data-page-name") || document.title || "Website";
 
@@ -299,6 +255,8 @@
                         body: JSON.stringify({
                             name,
                             email,
+                            companyUrl,
+                            telegramHandle,
                             message,
                             pageName,
                         }),
