@@ -2444,6 +2444,10 @@ body::before {
   text-decoration-line: underline;
 }
 
+.decoration-dotted {
+  text-decoration-style: dotted;
+}
+
 .antialiased {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
