@@ -3160,6 +3160,10 @@ body::before {
     font-size: 1.20rem;
   }
 
+  .lg\:text-\[1\.45rem\] {
+    font-size: 1.45rem;
+  }
+
   .lg\:leading-\[1\.7\] {
     line-height: 1.7;
   }
