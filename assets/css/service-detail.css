@@ -1,0 +1,78 @@
+/* A consistent white-and-blue presentation for the five service detail pages. */
+.service-detail-page {
+    background: #ffffff;
+    color: #162a4a;
+}
+
+.service-detail-page main {
+    max-width: 1320px;
+    padding-top: 9rem;
+}
+
+/* Only the first section is redesigned. All remaining page content keeps its existing layout. */
+.service-detail-page main > section:first-of-type {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    border: 1px solid #dce9fb;
+    border-radius: 2rem;
+    background:
+        radial-gradient(circle at 92% 10%, rgba(59, 130, 246, .22), transparent 26rem),
+        radial-gradient(circle at 11% 100%, rgba(147, 197, 253, .25), transparent 25rem),
+        linear-gradient(135deg, #ffffff 0%, #eff6ff 55%, #f8fbff 100%);
+    box-shadow: 0 24px 64px rgba(30, 64, 175, .13);
+}
+
+.service-detail-page main > section:first-of-type::before,
+.service-detail-page main > section:first-of-type::after {
+    position: absolute;
+    z-index: -1;
+    border-radius: 999px;
+    content: "";
+    pointer-events: none;
+}
+
+.service-detail-page main > section:first-of-type::before {
+    top: -8rem;
+    right: 12%;
+    width: 15rem;
+    height: 15rem;
+    border: 1px solid rgba(59, 130, 246, .2);
+}
+
+.service-detail-page main > section:first-of-type::after {
+    bottom: -11rem;
+    right: -4rem;
+    width: 24rem;
+    height: 24rem;
+    background: radial-gradient(circle, rgba(37, 99, 235, .12), rgba(37, 99, 235, 0) 68%);
+}
+
+.service-detail-page main > section:first-of-type > div { padding: 3rem; }
+.service-detail-page main > section:first-of-type span:first-child {
+    color: #1d4ed8;
+    background: #ffffff;
+    box-shadow: inset 0 0 0 1px #bfdbfe;
+}
+.service-detail-page main > section:first-of-type h1 {
+    color: #102a56;
+    font-size: clamp(2.45rem, 5vw, 4.6rem);
+    line-height: 1.03;
+}
+.service-detail-page main > section:first-of-type p { color: #4b6388; }
+.service-detail-page main > section:first-of-type .grid > div {
+    border-color: #dbeafe;
+    background: rgba(255,255,255,.86);
+    box-shadow: 0 14px 34px rgba(30, 64, 175, .08);
+}
+.service-detail-page main > section:first-of-type .grid > div > div:first-child {
+    background: linear-gradient(135deg, #123b78, #2563eb);
+}
+.service-detail-page main > section:first-of-type .grid > div > div:last-child { background: #eff6ff; }
+.service-detail-page main > section:first-of-type .grid > div p { color: #4b6388; }
+.service-detail-page main > section:first-of-type .grid > div .text-2xl { color: #ffffff; }
+
+@media (max-width: 640px) {
+    .service-detail-page main { padding-top: 7.5rem; }
+    .service-detail-page main > section:first-of-type > div { padding: 2rem; }
+}
