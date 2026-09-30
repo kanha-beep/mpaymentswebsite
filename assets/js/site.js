@@ -11,7 +11,7 @@
     const initStickyHeader = () => {
         const header = document.querySelector("#site-header");
         const shell = document.querySelector("[data-header-shell]");
-        const heroSection = document.querySelector("main > section");
+        const heroSection = document.querySelector("main > section, #hero");
         if (!header || !shell) return;
 
         let stickyThreshold = 12;
