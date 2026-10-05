@@ -28,77 +28,100 @@
 <body class="font-poppins overflow-x-hidden bg-black text-slate-800">
 
   <!-- HEADER: UI taken from the Tailwind source -->
-  <header id="site-header"
-    class="group fixed inset-x-0 top-0 z-40 bg-transparent shadow-none backdrop-blur-sm transition-all duration-300 hover:bg-white">
-    <div class="w-full">
-      <div data-header-shell
-        class="flex w-full items-center justify-between bg-transparent p-8 transition-all duration-300 group-hover:bg-white sm:px-6 lg:px-8">
-        <a href="/" data-nav-logo
-          class="ml-[1rem] bg-gradient-to-r from-blue-700 to-cyan-700 bg-clip-text text-[2.5rem] font-bold text-transparent transition duration-300 lg:ml-[7rem]">
-          WE + Match + Flow
-        </a>
+ <header id="site-header" data-transparent-header class="group fixed inset-x-0 top-0 z-40 bg-transparent hover:bg-white shadow-none backdrop-blur-sm transition-all duration-300">
+        <div class="w-full">
+            <!-- Navbar inner row: left logo, center links, right CTA/mobile toggle -->
+            <div class="flex w-full items-center justify-between bg-transparent p-8 transition-all duration-300 group-hover:bg-white sm:px-6 lg:px-8">
+                <!-- Left side: brand/logo -->
+                <a href="/" class="ml-[1rem] lg:ml-[7rem] text-[2.5rem] font-bold text-black transition duration-300 group-hover:text-black bg-gradient-to-r from-blue-700 to-cyan-700 text-transparent bg-clip-text">
+                        WE + Match = Flow
+                    </a>
 
-        <nav class="hidden items-center gap-8 lg:flex">
-          <a href="/" class="nav-underline-link text-xl font-semibold text-black transition-colors duration-300 hover:text-yellow-500">Home</a>
+                <!-- Center: desktop navigation links -->
+                <nav class="hidden items-center gap-8 lg:flex">
+                    <a href="/" class="nav-underline-link text-xl font-semibold text-black transition-colors duration-300 ease-in-out hover:text-yellow-500">Home</a>
+                    <!-- Services link with dropdown -->
+                    <div class="group relative">
+                        <a href="/services.html" class="nav-underline-link peer flex items-center gap-2 text-xl font-medium text-black transition-colors duration-300 ease-in-out hover:text-yellow-500">
+                                Services
+                                <span class="text-xs">&#9662;</span>
+                            </a>
+                        <!-- Services dropdown menu -->
+                        <div class="invisible absolute left-1/2 top-full z-20 w-[320px] -translate-x-1/2 pt-4 opacity-0 transition duration-200 group-hover:visible group-hover:opacity-100 hover:visible hover:opacity-100">
+                            <div class="rounded-3xl border border-slate-200 bg-white p-3">
+                                <a href="/world-wide-card-processing.html" class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-700">World
+                                    Wide Card Processing</a>
+                                <a href="/company-incorporation-services.html" class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-700">Company
+                                    Incorporation Services</a>
+                                <a href="/upi-alternative-payment-solutions.html" class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-700">UPI
+                                    &amp; Alternative Payment Solutions</a>
+                                <a href="/european-iban-business-accounts.html" class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-700">European
+                                    IBAN Business Accounts</a>
+                                <a href="/website-technology-services.html" class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-700">Website
+                                    &amp; Technology Services</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="/about-us.html" data-nav-link class="nav-underline-link text-xl font-semibold text-black transition-colors duration-700 ease-in-out hover:text-yellow-500">About
+                            Us</a>
+                    <a href="/contact-us.html" data-nav-link class="nav-underline-link text-xl font-semibold text-black transition-colors duration-700 ease-in-out hover:text-yellow-500">Contact
+                            Us</a>
+                </nav>
 
-          <div class="relative">
-            <a href="/services.html" class="nav-underline-link peer flex items-center gap-2 text-xl font-medium text-black transition-colors duration-300 hover:text-yellow-500">
-              Services <span class="text-xs">&#9662;</span>
-            </a>
-            <div class="invisible absolute left-1/2 top-full z-20 w-[320px] -translate-x-1/2 pt-4 opacity-0 transition duration-200 peer-hover:visible peer-hover:opacity-100 hover:visible hover:opacity-100">
-              <div class="rounded-3xl border border-slate-200 bg-white p-3">
-                <a href="/world-wide-card-processing.html" class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-700">World Wide Card Processing</a>
-                <a href="/company-incorporation-services.html" class="block rounded-2xl bg-blue-50 px-4 py-3 text-sm font-medium text-blue-700">Company Incorporation Services</a>
-                <a href="/upi-alternative-payment-solutions.html" class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-700">UPI &amp; Alternative Payment Solutions</a>
-                <a href="/european-iban-business-accounts.html" class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-700">European IBAN Business Accounts</a>
-                <a href="/website-technology-services.html" class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-700">Website &amp; Technology Services</a>
-              </div>
+                <!-- Right side: desktop call-to-action button -->
+                <div class="hidden lg:block">
+                    <a href="/contact-us.html" class="inline-flex items-center gap-3 rounded-full bg-brand-500 px-5 py-3 text-sm font-semibold text-white  transition hover:-translate-y-0.5 hover:bg-brand-600">
+                            Schedule Meeting
+                            <span class="text-base">&#8599;</span>
+                        </a>
+                </div>
+
+                <!-- Mobile: hamburger menu button -->
+                <button type="button" data-mobile-toggle data-nav-toggle aria-expanded="false" aria-controls="mobile-menu" class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/10 text-white backdrop-blur-sm transition duration-300 group-hover:border-slate-200 group-hover:bg-white group-hover:text-black lg:hidden">
+                        <span class="sr-only">Open menu</span>
+                        <span class="space-y-1.5">
+                            <span class="block h-0.5 w-5 bg-current"></span>
+                            <span class="block h-0.5 w-5 bg-current"></span>
+                            <span class="block h-0.5 w-5 bg-current"></span>
+                        </span>
+                    </button>
             </div>
-          </div>
 
-          <a href="/about-us.html" class="nav-underline-link text-xl font-semibold text-black transition-colors duration-700 hover:text-yellow-500">About Us</a>
-          <a href="/contact-us.html" class="nav-underline-link text-xl font-semibold text-black transition-colors duration-300 hover:text-yellow-500">Contact Us</a>
-        </nav>
-
-        <div class="hidden lg:block">
-          <a href="#contact" class="inline-flex items-center gap-3 rounded-full bg-blue-600 px-5 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-blue-700">
-            Schedule Meeting <span class="text-base">&#8599;</span>
-          </a>
-        </div>
-
-        <button type="button" id="mobile-toggle"
-          class="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/10 backdrop-blur-sm transition duration-300 group-hover:border-slate-200 group-hover:bg-white group-hover:text-black lg:hidden">
-          <span class="sr-only">Open menu</span>
-          <span class="space-y-1.5">
-            <span class="block h-0.5 w-5 bg-current"></span>
-            <span class="block h-0.5 w-5 bg-current"></span>
-            <span class="block h-0.5 w-5 bg-current"></span>
-          </span>
-        </button>
-      </div>
-
-      <div id="mobile-menu" class="hidden border-t border-slate-200 bg-white px-4 pb-4 pt-3 sm:px-6 lg:hidden">
-        <div class="space-y-2">
-          <a href="/" class="block rounded-2xl bg-blue-50 px-4 py-3 text-sm font-semibold text-blue-700">Home</a>
-          <div class="rounded-2xl border border-slate-200">
-            <button type="button" id="mobile-services-toggle" class="flex w-full items-center justify-between px-4 py-3 text-left text-sm font-semibold text-slate-800">
-              <span>Services</span><span>&#9662;</span>
-            </button>
-            <div id="mobile-services" class="hidden space-y-1 px-2 pb-2">
-              <a href="/world-wide-card-processing.html" class="block rounded-2xl px-3 py-2 text-sm text-slate-700 hover:bg-blue-50">World Wide Card Processing</a>
-              <a href="/company-incorporation-services.html" class="block rounded-2xl bg-blue-50 px-3 py-2 text-sm font-semibold text-blue-700">Company Incorporation Services</a>
-              <a href="/upi-alternative-payment-solutions.html" class="block rounded-2xl px-3 py-2 text-sm text-slate-700 hover:bg-blue-50">UPI &amp; Alternative Payment Solutions</a>
-              <a href="/european-iban-business-accounts.html" class="block rounded-2xl px-3 py-2 text-sm text-slate-700 hover:bg-blue-50">European IBAN Business Accounts</a>
-              <a href="/website-technology-services.html" class="block rounded-2xl px-3 py-2 text-sm text-slate-700 hover:bg-blue-50">Website &amp; Technology Services</a>
+            <!-- Mobile menu panel -->
+            <div id="mobile-menu" data-mobile-menu class="hidden border-t border-slate-200 bg-white px-4 pb-4 pt-3 sm:px-6 xl:hidden">
+                <div class="space-y-2">
+                    <a href="/" class="block rounded-2xl bg-brand-50 px-4 py-3 text-sm font-semibold text-brand-700">Home</a>
+                    <!-- Mobile services section with expandable submenu -->
+                    <div class="rounded-2xl border border-slate-200">
+                        <button type="button" data-submenu-toggle aria-expanded="false" class="flex w-full items-center justify-between px-4 py-3 text-left text-sm font-semibold text-slate-800">
+                                <span>Services</span>
+                                <span>&#9662;</span>
+                            </button>
+                        <!-- Mobile services submenu links -->
+                        <div data-submenu class="hidden space-y-1 px-2 pb-2">
+                            <a href="/world-wide-card-processing.html" class="block rounded-2xl px-3 py-2 text-sm text-slate-700 hover:bg-brand-50 hover:text-brand-700">World
+                                    Wide Card Processing</a>
+                            <a href="/company-incorporation-services.html" class="block rounded-2xl px-3 py-2 text-sm text-slate-700 hover:bg-brand-50 hover:text-brand-700">Company
+                                    Incorporation Services</a>
+                            <a href="/upi-alternative-payment-solutions.html" class="block rounded-2xl px-3 py-2 text-sm text-slate-700 hover:bg-brand-50 hover:text-brand-700">UPI
+                                    &amp; Alternative Payment Solutions</a>
+                            <a href="/european-iban-business-accounts.html" class="block rounded-2xl px-3 py-2 text-sm text-slate-700 hover:bg-brand-50 hover:text-brand-700">European
+                                    IBAN Business Accounts</a>
+                            <a href="/website-technology-services.html" class="block rounded-2xl px-3 py-2 text-sm text-slate-700 hover:bg-brand-50 hover:text-brand-700">Website
+                                    &amp; Technology Services</a>
+                        </div>
+                    </div>
+                    <a href="/about-us.html" class="block rounded-2xl px-4 py-3 text-sm font-semibold text-slate-800 hover:bg-brand-50 hover:text-brand-700">About
+                            Us</a>
+                    <a href="/contact-us.html" class="block rounded-2xl px-4 py-3 text-sm font-semibold text-slate-800 hover:bg-brand-50 hover:text-brand-700">Contact
+                            Us</a>
+                    <!-- Mobile CTA button -->
+                    <a href="/contact-us.html" class="mt-3 inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-500 px-5 py-3 text-sm font-semibold text-white">Schedule
+                            Meeting <span>&#8599;</span></a>
+                </div>
             </div>
-          </div>
-          <a href="/about-us.html" class="block rounded-2xl px-4 py-3 text-sm font-semibold text-slate-800 hover:bg-blue-50">About Us</a>
-          <a href="/contact-us.html" class="block rounded-2xl px-4 py-3 text-sm font-semibold text-slate-800 hover:bg-blue-50">Contact Us</a>
-          <a href="#contact" class="mt-3 inline-flex w-full items-center justify-center gap-2 rounded-full bg-blue-600 px-5 py-3 text-sm font-semibold text-white">Schedule Meeting <span>&#8599;</span></a>
         </div>
-      </div>
-    </div>
-  </header>
+    </header>
 
   <main>
 
@@ -197,7 +220,7 @@
         </div>
 
         <div class="relative w-full flex-1 text-center">
-          <img src="https://img.sanishtech.com/u/1a8a977af482a7012fc334d8e0cd55cc.png" alt="M Payments" class="mx-auto w-full max-w-[450px] rounded-[30px] shadow-[0_0_80px_rgba(59,130,246,.7)] -rotate-[5deg]" />
+          <img src="https://img.sanishtech.com/u/1a8a977af482a7012fc334d8e0cd55cc.png" alt="We Match Flow" class="mx-auto w-full max-w-[450px] rounded-[30px] shadow-[0_0_80px_rgba(59,130,246,.7)] -rotate-[5deg]" />
         </div>
       </div>
     </section>
@@ -281,7 +304,7 @@
   <footer class="bg-black px-5 pb-5 pt-[70px] text-white">
     <div class="mx-auto grid max-w-[1200px] grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr]">
       <div>
-        <h2 class="mb-[15px] text-2xl font-semibold text-[#00d4ff]">M Payments</h2>
+        <h2 class="mb-[15px] text-2xl font-semibold text-[#00d4ff]">We Match Flow</h2>
         <p class="text-sm leading-[1.7] text-gray-300">We Match Flow delivers secure, fast, and reliable digital payment solutions for modern businesses. We empower merchants with advanced technology, fraud protection, and seamless global transactions.</p>
         <div class="mt-5 flex gap-3">
           <a href="#" class="flex h-[35px] w-[35px] items-center justify-center rounded-full bg-[#203a43] transition hover:bg-[#00d4ff] hover:text-black">F</a>
@@ -316,13 +339,24 @@
   </footer>
 
   <script>
-    const mobileToggle = document.getElementById("mobile-toggle");
-    const mobileMenu = document.getElementById("mobile-menu");
-    const mobileServicesToggle = document.getElementById("mobile-services-toggle");
-    const mobileServices = document.getElementById("mobile-services");
+    const mobileToggle = document.querySelector("[data-mobile-toggle]");
+    const mobileMenu = document.querySelector("[data-mobile-menu]");
 
-    mobileToggle?.addEventListener("click", () => mobileMenu.classList.toggle("hidden"));
-    mobileServicesToggle?.addEventListener("click", () => mobileServices.classList.toggle("hidden"));
+    mobileToggle?.addEventListener("click", () => {
+      const isOpen = !mobileMenu.classList.contains("hidden");
+      mobileMenu.classList.toggle("hidden", isOpen);
+      mobileToggle.setAttribute("aria-expanded", String(!isOpen));
+    });
+
+    document.querySelectorAll("[data-submenu-toggle]").forEach((button) => {
+      button.addEventListener("click", () => {
+        const submenu = button.parentElement?.querySelector("[data-submenu]");
+        if (!submenu) return;
+        const isOpen = !submenu.classList.contains("hidden");
+        submenu.classList.toggle("hidden", isOpen);
+        button.setAttribute("aria-expanded", String(!isOpen));
+      });
+    });
 
     document.querySelectorAll(".faq-question").forEach((button) => {
       button.addEventListener("click", () => {
