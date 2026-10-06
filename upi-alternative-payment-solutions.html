@@ -233,48 +233,47 @@
 <section id="about" class="relative overflow-hidden bg-[radial-gradient(circle_at_70%_50%,#1e3a8a_0%,#0f172a_60%)] px-[6%] py-28 text-white">
   <div class="absolute right-[5%] top-1/2 h-[600px] w-[600px] -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(59,130,246,0.4),transparent_70%)]"></div>
 
-  <div class="relative z-10 mx-auto flex max-w-7xl flex-col items-center justify-between gap-16 lg:flex-row">
+  <div class="relative z-10 mx-auto flex max-w-7xl flex-col items-stretch justify-between gap-16 lg:flex-row">
     <div class="flex-1">
       <h2 class="mb-4 text-4xl font-bold md:text-[44px]">Benefits</h2>
       <p class="mb-12 text-slate-300">“Secure Payments. Faster Settlements. Better Business.”</p>
 
-      <div class="mb-6 flex items-start gap-5 rounded-2xl border border-white/10 bg-white/[0.06] p-6 backdrop-blur-xl transition hover:translate-x-2 hover:bg-white/10">
+      <button type="button" data-benefit-trigger="instant-payments" aria-pressed="false" class="mb-6 flex w-full items-start gap-5 rounded-2xl border border-white/10 bg-white/[0.06] p-6 text-left backdrop-blur-xl transition hover:translate-x-2 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-blue-300">
         <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-blue-500 to-purple-600 text-2xl">⚡</div>
         <div>
-          <h3 class="mb-1 text-lg font-semibold">Instant Payments & Faster Settlements</h3>
+          <h3 class="mb-1 text-lg font-semibold">Instant Payments &amp; Faster Settlements</h3>
           <p class="text-sm text-slate-300">Receive payments in real-time with quick settlement cycles, improving your business cash flow.</p>
         </div>
-      </div>
+      </button>
 
-      <div class="mb-6 flex items-start gap-5 rounded-2xl border border-white/10 bg-white/[0.06] p-6 backdrop-blur-xl transition hover:translate-x-2 hover:bg-white/10">
+      <button type="button" data-benefit-trigger="customer-convenience" aria-pressed="false" class="mb-6 flex w-full items-start gap-5 rounded-2xl border border-white/10 bg-white/[0.06] p-6 text-left backdrop-blur-xl transition hover:translate-x-2 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-blue-300">
         <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-blue-500 to-purple-600 text-2xl">😊</div>
         <div>
           <h3 class="mb-1 text-lg font-semibold">Enhanced Customer Convenience</h3>
           <p class="text-sm text-slate-300">Offer seamless, one-tap digital payments that make transactions smooth and hassle-free for your customers.</p>
         </div>
-      </div>
+      </button>
 
-      <div class="mb-6 flex items-start gap-5 rounded-2xl border border-white/10 bg-white/[0.06] p-6 backdrop-blur-xl transition hover:translate-x-2 hover:bg-white/10">
+      <button type="button" data-benefit-trigger="cash-handling" aria-pressed="false" class="mb-6 flex w-full items-start gap-5 rounded-2xl border border-white/10 bg-white/[0.06] p-6 text-left backdrop-blur-xl transition hover:translate-x-2 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-blue-300">
         <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-blue-500 to-purple-600 text-2xl">💼</div>
         <div>
           <h3 class="mb-1 text-lg font-semibold">Reduced Cash Handling Risks</h3>
           <p class="text-sm text-slate-300">Minimize dependency on physical cash, lowering risks related to theft, errors, and manual reconciliation.</p>
         </div>
-      </div>
+      </button>
 
-      <div class="mb-0 flex items-start gap-5 rounded-2xl border border-white/10 bg-white/[0.06] p-6 backdrop-blur-xl transition hover:translate-x-2 hover:bg-white/10">
+      <button type="button" data-benefit-trigger="success-rates" aria-pressed="false" class="mb-0 flex w-full items-start gap-5 rounded-2xl border border-white/10 bg-white/[0.06] p-6 text-left backdrop-blur-xl transition hover:translate-x-2 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-blue-300">
         <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-blue-500 to-purple-600 text-2xl">📈</div>
         <div>
           <h3 class="mb-1 text-lg font-semibold">High Transaction Success Rates</h3>
           <p class="text-sm text-slate-300">Experience reliable and optimized payment processing with maximum transaction approval rates.</p>
         </div>
-      </div>
+      </button>
     </div>
 
-    <div class="flex-1 text-center">
-      <img src="A_digital_promotional_promotional_graphic_for_M_Pa.png"
-           alt="We Match Flow"
-           class="mx-auto w-full max-w-[450px] rotate-[-5deg] rounded-[30px] shadow-[0_0_80px_rgba(59,130,246,0.7)]">
+    <div class="flex flex-1">
+      <div data-benefit-placeholder class="flex w-full flex-col items-center justify-center rounded-[30px] border border-dashed border-white/30 bg-slate-950/35 p-8 text-center shadow-[0_0_80px_rgba(59,130,246,0.25)] backdrop-blur-xl lg:min-h-full"><div class="mb-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-white/10 text-3xl">☝️</div><h3 class="mb-3 text-2xl font-bold">Select a benefit to view details</h3><p class="max-w-sm leading-7 text-slate-300">Click any benefit on the left to explore how it can support smoother UPI payments and business operations.</p></div>
+      <article data-benefit-detail class="hidden w-full flex-col rounded-[30px] border border-white/15 bg-slate-950/45 p-8 text-left shadow-[0_0_80px_rgba(59,130,246,0.35)] backdrop-blur-xl lg:min-h-full"></article>
     </div>
   </div>
 </section>
@@ -494,6 +493,34 @@
 
 <!-- ==================== VANILLA JS ONLY ==================== -->
 <script>
+  const benefitDetails = {
+    'instant-payments': { icon: '⚡', label: 'Real-time payment processing', title: 'Instant Payments & Faster Settlements', text: 'Give customers a smooth UPI checkout experience while helping your business receive payment confirmations quickly. Faster settlement options can improve working-capital visibility and reduce the wait between a successful transaction and funds becoming available.', firstTitle: '24/7 payment experience', firstText: 'Support always-on digital payment journeys built for modern customers.', secondTitle: 'Healthier cash flow', secondText: 'Use faster settlement cycles to plan payouts, inventory and daily operations with greater confidence.' },
+    'customer-convenience': { icon: '😊', label: 'Seamless UPI checkout', title: 'Enhanced Customer Convenience', text: 'Make it easier for customers to complete secure digital payments with a familiar UPI experience. A convenient checkout can reduce payment friction and support a smoother purchase journey across mobile devices.', firstTitle: 'Simple customer journey', firstText: 'Help customers pay with fewer steps using their preferred UPI app.', secondTitle: 'Better checkout experience', secondText: 'Create a fast, mobile-friendly payment flow designed for repeat purchases.' },
+    'cash-handling': { icon: '💼', label: 'Digital payment security', title: 'Reduced Cash Handling Risks', text: 'Move more collections to digital payment methods to reduce dependency on physical cash. Digital transaction records can also make reconciliation, reporting and day-to-day payment management easier for your team.', firstTitle: 'Less manual handling', firstText: 'Reduce the operational effort associated with counting, storing and transporting cash.', secondTitle: 'Clearer payment records', secondText: 'Use digital transaction data to support faster reconciliation and visibility.' },
+    'success-rates': { icon: '📈', label: 'Reliable payment acceptance', title: 'High Transaction Success Rates', text: 'Support reliable UPI payment processing with a checkout flow designed to help customers complete transactions smoothly. Clear payment status and optimized processing can help merchants deliver a more dependable payment experience.', firstTitle: 'More confident customers', firstText: 'Give customers clear status updates during their payment journey.', secondTitle: 'Operational continuity', secondText: 'Help your business accept digital payments with a consistent, efficient flow.' }
+  };
+
+  const detailPanel = document.querySelector('[data-benefit-detail]');
+  const placeholder = document.querySelector('[data-benefit-placeholder]');
+  document.querySelectorAll('[data-benefit-trigger]').forEach((button) => {
+    button.addEventListener('click', () => {
+      const detail = benefitDetails[button.dataset.benefitTrigger];
+      document.querySelectorAll('[data-benefit-trigger]').forEach((item) => {
+        item.setAttribute('aria-pressed', 'false');
+        item.classList.remove('border-blue-400/60', 'bg-white/[0.12]');
+        item.classList.add('border-white/10', 'bg-white/[0.06]');
+      });
+      button.setAttribute('aria-pressed', 'true');
+      button.classList.remove('border-white/10', 'bg-white/[0.06]');
+      button.classList.add('border-blue-400/60', 'bg-white/[0.12]');
+      placeholder?.classList.add('hidden');
+      if (!detail || !detailPanel) return;
+      detailPanel.innerHTML = `<div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-purple-600 text-3xl">${detail.icon}</div><p class="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-blue-300">${detail.label}</p><h3 class="mb-5 text-3xl font-bold leading-tight">${detail.title}</h3><p class="mb-7 text-base leading-7 text-slate-200">${detail.text}</p><div class="mt-auto grid gap-4 sm:grid-cols-2"><div class="rounded-2xl border border-white/10 bg-white/[0.06] p-4"><h4 class="mb-1 font-semibold text-white">${detail.firstTitle}</h4><p class="text-sm leading-6 text-slate-300">${detail.firstText}</p></div><div class="rounded-2xl border border-white/10 bg-white/[0.06] p-4"><h4 class="mb-1 font-semibold text-white">${detail.secondTitle}</h4><p class="text-sm leading-6 text-slate-300">${detail.secondText}</p></div></div>`;
+      detailPanel.classList.remove('hidden');
+      detailPanel.classList.add('flex');
+    });
+  });
+
   // FAQ accordion
   document.querySelectorAll(".faq-question").forEach((button) => {
     button.addEventListener("click", () => {
