@@ -33,9 +33,13 @@
             <!-- Navbar inner row: left logo, center links, right CTA/mobile toggle -->
             <div class="flex w-full items-center justify-between bg-transparent p-8 transition-all duration-300 group-hover:bg-white sm:px-6 lg:px-8">
                 <!-- Left side: brand/logo -->
-                <a href="/" class="ml-[1rem] lg:ml-[7rem] text-[2.5rem] font-bold text-black transition duration-300 group-hover:text-black bg-gradient-to-r from-blue-700 to-cyan-700 text-transparent bg-clip-text">
-                        WE + Match = Flow
-                    </a>
+                <a href="/" class="ml-[1rem] lg:ml-[7rem] transition duration-300" aria-label="WeMatchFlow home">
+                    <img
+                        src="https://res.cloudinary.com/dw7elrwuy/image/upload/v1791206265/images/er3himfqpreut9ubo5c2.png"
+                        alt="WeMatchFlow"
+                        class="h-16 w-auto object-contain"
+                    >
+                </a>
 
                 <!-- Center: desktop navigation links -->
                 <nav class="hidden items-center gap-8 lg:flex">
@@ -141,12 +145,12 @@
         <div class="mb-8 flex flex-wrap justify-center gap-5">
           <a href="#contact" class="rounded-full bg-gradient-to-r from-cyan-400 to-blue-600 px-8 py-3.5 font-semibold text-white shadow-[0_10px_30px_rgba(0,114,255,.4)] transition duration-300 hover:-translate-y-1">Get Started With Experts</a>
         </div>
-        <div class="mt-5 flex flex-wrap justify-center gap-5">
+        <!-- <div class="mt-5 flex flex-wrap justify-center gap-5">
           <span class="rounded-full border border-white/30 px-[18px] py-2 text-[13px] tracking-wider opacity-80 transition hover:-translate-y-1 hover:bg-white hover:text-black">VISA</span>
           <span class="rounded-full border border-white/30 px-[18px] py-2 text-[13px] tracking-wider opacity-80 transition hover:-translate-y-1 hover:bg-white hover:text-black">MASTERCARD</span>
           <span class="rounded-full border border-white/30 px-[18px] py-2 text-[13px] tracking-wider opacity-80 transition hover:-translate-y-1 hover:bg-white hover:text-black">AMERICAN EXPRESS</span>
           <span class="rounded-full border border-white/30 px-[18px] py-2 text-[13px] tracking-wider opacity-80 transition hover:-translate-y-1 hover:bg-white hover:text-black">RUPAY</span>
-        </div>
+        </div> -->
       </div>
     </section>
 
@@ -170,11 +174,17 @@
             </div>
           </div>
 
-          <div class="flex w-full justify-center lg:w-[30%]">
-            <div class="flex h-[220px] w-[220px] items-center justify-center overflow-hidden rounded-full bg-[radial-gradient(circle,#2563eb,#1d4ed8)] text-center text-white shadow-[0_0_40px_rgba(37,99,235,.6)] animate-pulseGlow md:h-[260px] md:w-[260px]">
-              <img src="https://img.sanishtech.com/u/9c86206713c99974c0b0bf63ec27d9b2.png" alt="Company incorporation services" class="h-full w-full object-cover" />
-            </div>
-          </div>
+             <div class="w-full lg:w-[30%] flex justify-center">
+                  <div
+                    class="w-[220px] h-[220px] md:w-[260px] md:h-[260px] rounded-full flex flex-col justify-center items-center text-center text-white bg-[radial-gradient(circle,#2563eb,#1d4ed8)] shadow-[0_0_40px_rgba(37,99,235,.6)] animate-pulseGlow"
+                  >
+                    <h3 class="text-[26px] font-semibold">WeMatchFlow</h3>
+
+                    <span class="text-sm opacity-80">
+                      Processing Solutions
+                    </span>
+                  </div>
+                </div>
 
           <div class="flex w-full flex-col gap-10 lg:w-[30%]">
             <div class="rounded-[15px] border border-white/10 bg-white p-[15px] transition duration-400 hover:-translate-y-2">
