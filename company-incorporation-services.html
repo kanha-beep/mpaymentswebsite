@@ -289,11 +289,14 @@
         <div>
           <h2 class="mb-4 text-[36px] font-semibold">Get In Touch with Us!</h2>
           <p class="mb-8 text-gray-600">Brother set had private his letters observe outward resolve. Shutters ye marriage to throwing we as.</p>
-          <form id="contact-form" class="space-y-5">
-            <div><label class="mb-2 block font-medium" for="name">Name</label><input class="w-full rounded-lg border border-gray-300 px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500" id="name" placeholder="Name" type="text" /></div>
-            <div><label class="mb-2 block font-medium" for="email">Email</label><input class="w-full rounded-lg border border-gray-300 px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500" id="email" placeholder="Email" required type="email" /></div>
-            <div><label class="mb-2 block font-medium" for="message">Message</label><textarea class="w-full resize-none rounded-lg border border-gray-300 px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500" id="message" placeholder="Message" rows="7"></textarea></div>
+          <form class="js-contact-form space-y-5" data-page-name="Company Incorporation Services" novalidate>
+            <div><label class="mb-2 block font-medium">Name</label><input name="name" class="w-full rounded-lg border border-gray-300 px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500" placeholder="Name" type="text" /></div>
+            <div><label class="mb-2 block font-medium">Email</label><input name="email" class="w-full rounded-lg border border-gray-300 px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500" placeholder="Email" required type="email" /></div>
+            <div><label class="mb-2 block font-medium">Company URL</label><input name="companyUrl" class="w-full rounded-lg border border-gray-300 px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500" placeholder="https://yourcompany.com" type="text" /></div>
+            <div><label class="mb-2 block font-medium">Telegram Handle</label><input name="telegramHandle" class="w-full rounded-lg border border-gray-300 px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500" placeholder="@yourhandle" type="text" /></div>
+            <div><label class="mb-2 block font-medium">Message</label><textarea name="message" class="w-full resize-none rounded-lg border border-gray-300 px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500" placeholder="Message" rows="7"></textarea></div>
             <button class="w-full rounded-lg bg-gradient-to-r from-cyan-400 to-blue-600 py-3.5 font-semibold text-white shadow-lg shadow-blue-500/20 transition hover:-translate-y-1" type="submit">Send</button>
+            <p data-form-status class="hidden rounded-2xl px-4 py-3 text-sm font-medium"></p>
           </form>
         </div>
 
@@ -388,10 +391,7 @@
       });
     });
 
-    document.getElementById("contact-form")?.addEventListener("submit", (event) => {
-      event.preventDefault();
-      alert("Submission successful");
-    });
   </script>
+  <script defer src="/assets/js/site.js"></script>
 </body>
 </html>

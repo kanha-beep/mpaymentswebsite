@@ -269,7 +269,8 @@
                     form.reset();
                     fields.forEach((field) => setFieldState(field, true));
                     setStatus("success", "Thanks. Your message has been sent successfully.");
-                } catch {
+                } catch (error) {
+                    console.log("error: ", error)
                     setStatus("error", "We could not send your message right now. Please try again.");
                 }
             });

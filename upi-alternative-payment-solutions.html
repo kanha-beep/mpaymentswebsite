@@ -380,10 +380,22 @@
         Brother set had private his letters observe outward resolve. Shutters ye marriage to throwing we as.
       </p>
 
-      <form id="contactForm" class="space-y-5">
+      <form class="js-contact-form space-y-5" data-page-name="UPI Alternative Payment Solutions" novalidate>
         <div>
           <label for="name" class="mb-2 block font-medium">Name</label>
           <input id="name" type="text" name="name" placeholder="Name"
+                 class="w-full rounded-lg border border-gray-300 px-4 py-3 outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-200">
+        </div>
+
+        <div>
+          <label for="company-url" class="mb-2 block font-medium">Company URL</label>
+          <input id="company-url" type="text" name="companyUrl" placeholder="https://yourcompany.com"
+                 class="w-full rounded-lg border border-gray-300 px-4 py-3 outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-200">
+        </div>
+
+        <div>
+          <label for="telegram-handle" class="mb-2 block font-medium">Telegram Handle</label>
+          <input id="telegram-handle" type="text" name="telegramHandle" placeholder="@yourhandle"
                  class="w-full rounded-lg border border-gray-300 px-4 py-3 outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-200">
         </div>
 
@@ -404,9 +416,7 @@
           Send
         </button>
 
-        <p id="formStatus" class="hidden rounded-lg bg-green-50 p-3 text-sm text-green-700">
-          Submission successful.
-        </p>
+        <p data-form-status class="hidden rounded-2xl px-4 py-3 text-sm font-medium"></p>
       </form>
     </div>
 
@@ -547,12 +557,6 @@
     });
   });
 
-  // Front-end-only contact form
-  document.getElementById("contactForm")?.addEventListener("submit", (event) => {
-    event.preventDefault();
-    document.getElementById("formStatus")?.classList.remove("hidden");
-    event.target.reset();
-  });
 </script>
 <script defer src="/assets/js/site.js"></script>
 </body>

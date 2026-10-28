@@ -415,11 +415,14 @@
         <div>
           <h2 class="text-[38px] md:text-[44px] font-semibold mb-5">Get In Touch with Us!</h2>
 
-          <form class="space-y-5">
-            <input type="text" placeholder="Name" class="w-full rounded-xl border border-slate-200 bg-white px-5 py-4 outline-none focus:border-blue-500">
-            <input type="email" placeholder="Email" class="w-full rounded-xl border border-slate-200 bg-white px-5 py-4 outline-none focus:border-blue-500">
-            <textarea rows="5" placeholder="Message" class="w-full rounded-xl border border-slate-200 bg-white px-5 py-4 outline-none focus:border-blue-500"></textarea>
+          <form class="js-contact-form space-y-5" data-page-name="World Wide Card Processing" novalidate>
+            <input name="name" type="text" placeholder="Name" class="w-full rounded-xl border border-slate-200 bg-white px-5 py-4 outline-none focus:border-blue-500">
+            <input name="email" type="email" required placeholder="Email" class="w-full rounded-xl border border-slate-200 bg-white px-5 py-4 outline-none focus:border-blue-500">
+            <input name="companyUrl" type="text" placeholder="https://yourcompany.com" class="w-full rounded-xl border border-slate-200 bg-white px-5 py-4 outline-none focus:border-blue-500">
+            <input name="telegramHandle" type="text" placeholder="@yourhandle" class="w-full rounded-xl border border-slate-200 bg-white px-5 py-4 outline-none focus:border-blue-500">
+            <textarea name="message" rows="5" placeholder="Message" class="w-full rounded-xl border border-slate-200 bg-white px-5 py-4 outline-none focus:border-blue-500"></textarea>
             <button type="submit" class="rounded-full bg-blue-600 px-7 py-3.5 font-semibold text-white transition hover:-translate-y-1 hover:bg-blue-700">Send</button>
+            <p data-form-status class="hidden rounded-2xl px-4 py-3 text-sm font-medium"></p>
           </form>
         </div>
 
@@ -518,5 +521,6 @@
     });
   </script>
 
+  <script defer src="/assets/js/site.js"></script>
 </body>
 </html>

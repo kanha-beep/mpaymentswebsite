@@ -932,13 +932,7 @@
                   options for your operational needs.
                 </p>
 
-                <form
-                  class="space-y-5"
-                  onsubmit="
-                    event.preventDefault();
-                    alert('Submission successful');
-                  "
-                >
+                <form class="js-contact-form space-y-5" data-page-name="European IBAN Business Accounts" novalidate>
                   <div>
                     <label for="name" class="block font-medium mb-2">
                       Name
@@ -946,6 +940,7 @@
 
                     <input
                       id="name"
+                      name="name"
                       type="text"
                       placeholder="Name"
                       class="w-full px-4 py-3 rounded-lg border border-gray-300 outline-none focus:ring-2 focus:ring-blue-500"
@@ -959,11 +954,22 @@
 
                     <input
                       id="email"
+                      name="email"
                       type="email"
                       placeholder="Email"
                       required
                       class="w-full px-4 py-3 rounded-lg border border-gray-300 outline-none focus:ring-2 focus:ring-blue-500"
                     />
+                  </div>
+
+                  <div>
+                    <label for="company-url" class="block font-medium mb-2">Company URL</label>
+                    <input id="company-url" name="companyUrl" type="text" placeholder="https://yourcompany.com" class="w-full px-4 py-3 rounded-lg border border-gray-300 outline-none focus:ring-2 focus:ring-blue-500" />
+                  </div>
+
+                  <div>
+                    <label for="telegram-handle" class="block font-medium mb-2">Telegram Handle</label>
+                    <input id="telegram-handle" name="telegramHandle" type="text" placeholder="@yourhandle" class="w-full px-4 py-3 rounded-lg border border-gray-300 outline-none focus:ring-2 focus:ring-blue-500" />
                   </div>
 
                   <div>
@@ -973,6 +979,7 @@
 
                     <textarea
                       id="message"
+                      name="message"
                       rows="7"
                       placeholder="Message"
                       class="w-full px-4 py-3 rounded-lg border border-gray-300 outline-none resize-none focus:ring-2 focus:ring-blue-500"
@@ -985,6 +992,7 @@
                   >
                     Send
                   </button>
+                  <p data-form-status class="hidden rounded-2xl px-4 py-3 text-sm font-medium"></p>
                 </form>
               </div>
 

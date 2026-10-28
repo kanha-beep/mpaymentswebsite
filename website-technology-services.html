@@ -557,26 +557,29 @@
             <p class="opacity-70">Get Started With Experts</p>
           </div>
           <div class="grid md:grid-cols-2 gap-10">
-            <form class="bg-white rounded-3xl p-8 shadow-lg">
+            <form class="js-contact-form bg-white rounded-3xl p-8 shadow-lg" data-page-name="Website Technology Services" novalidate>
               <label class="block text-sm font-semibold mb-2">Name</label
               ><input
-                class="w-full rounded-xl border border-slate-200 px-4 py-3 mb-5"
+                name="name" type="text" placeholder="Name" class="w-full rounded-xl border border-slate-200 px-4 py-3 mb-5"
               />
               <label class="block text-sm font-semibold mb-2">Email</label
               ><input
-                type="email"
+                name="email" type="email" required placeholder="Email"
                 class="w-full rounded-xl border border-slate-200 px-4 py-3 mb-5"
               />
+              <label class="block text-sm font-semibold mb-2">Company URL</label><input name="companyUrl" type="text" placeholder="https://yourcompany.com" class="w-full rounded-xl border border-slate-200 px-4 py-3 mb-5" />
+              <label class="block text-sm font-semibold mb-2">Telegram Handle</label><input name="telegramHandle" type="text" placeholder="@yourhandle" class="w-full rounded-xl border border-slate-200 px-4 py-3 mb-5" />
               <label class="block text-sm font-semibold mb-2">Message</label
               ><textarea
-                rows="5"
+                name="message" rows="5" placeholder="Message"
                 class="w-full rounded-xl border border-slate-200 px-4 py-3 mb-5"
               ></textarea>
               <button
-                class="w-full rounded-full bg-gradient-to-r from-cyan-400 to-blue-600 px-6 py-3.5 font-semibold text-white"
+                type="submit" class="w-full rounded-full bg-gradient-to-r from-cyan-400 to-blue-600 px-6 py-3.5 font-semibold text-white"
               >
                 Send
               </button>
+              <p data-form-status class="hidden rounded-2xl px-4 py-3 text-sm font-medium"></p>
             </form>
             <div class="space-y-5">
               <div class="bg-white rounded-3xl p-7 shadow-lg">
@@ -670,5 +673,6 @@
         });
       });
     </script>
+    <script defer src="/assets/js/site.js"></script>
   </body>
 </html>
